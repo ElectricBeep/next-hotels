@@ -22,7 +22,7 @@ export default function Home() {
           direction={"left"}
           features={hotelOneFeatures}
           imgOne={"featured1.jpg"}
-          imgTwo={"cosmopolit1.jpg"}
+          imgTwo={"cosmopolitNew.jpg"}
           hotelTitle={"Hotel Cosmopolit"}
           hotelDesc={"Hotel se nalazi u strogom centru grada, tačnije u ulici Radićeva broj 15. Spoj je vrhunske udobnosti i kvalitete. Luksuznih 16 soba, opremljenih i dizajniranih po posljednjim svjetskim standardima, garancija su kvalitetnog i udobnog smještaja a naše gostoljubivo osoblje će dodatno upotpuniti vaš boravak u hotelu."}
           linkOne={"hotel-cosmopolit"}

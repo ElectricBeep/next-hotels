@@ -9,6 +9,6 @@ export const featuredPhotos = [
   },
   {
     id: 3,
-    img: "featured/featured6.jpg",
+    img: "featured/featured7.jpg",
   },
 ];
