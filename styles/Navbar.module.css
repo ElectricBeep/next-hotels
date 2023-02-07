@@ -62,6 +62,10 @@
   gap: 5px;
 }
 
+.navMoreMenu span:hover {
+  color: gold;
+}
+
 .moreMenuContainer {
   display: flex;
   flex-direction: column;
