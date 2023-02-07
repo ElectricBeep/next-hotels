@@ -1,0 +1,260 @@
+.container {
+  overflow-x: hidden;
+  background-color: #e1f1df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapperLeft {
+  padding: 2rem 0;
+  height: 90vh;
+  width: 1424px;
+  display: flex;
+}
+
+.wrapperRight {
+  padding: 2rem 0;
+  height: 90vh;
+  width: 1424px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: lighter;
+  color: #3a6b34;
+}
+
+.left {
+  flex: 1;
+  position: relative;
+}
+
+.firstImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 65%;
+  width: 84%;
+  object-fit: contain;
+}
+
+.secondImage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 55%;
+  width: 72%;
+  object-fit: contain;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(60, 60, 60);
+}
+
+.rightContainer {
+  width: 80%;
+}
+
+.rightTitle {
+  font-size: 56px;
+}
+
+.rightText {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.readMoreButton {
+  margin: 30px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 15px;
+  border: 1px solid rgb(60, 60, 60);
+  color: rgb(60, 60, 60);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.readMoreButton:hover {
+  background-color: #3a6b34;
+  color: white;
+}
+
+.leftBottomIcon {
+  font-size: 20px;
+}
+
+.pillsContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 5px 15px;
+  border-radius: 30px;
+  font-weight: bold;
+  background-color: white;
+  border: 1px solid #3a6b34;
+  color: #3a6b34;
+  transition: all 0.3s ease;
+}
+
+.pill:hover {
+  background-color: #3a6b34;
+  color: white;
+}
+
+.button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 50%;
+  border: 1px solid gray;
+  padding: 15px 25px;
+  border-radius: 50px;
+  color: white;
+  background-color: #3a6b34;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s all ease;
+}
+
+.button:hover {
+  transform: scale(0.9);
+  background-color: #e1f1df;
+  color: #3a6b34;
+}
+
+.hr {
+  background-color: #3a6b34;
+  height: 3px;
+}
+
+@media (max-width: 1600px) {
+  .wrapperLeft,
+  .wrapperRight {
+    height: fit-content;
+    width: 1124px;
+  }
+
+  .rightTitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .left {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .wrapperRight {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+
+  .wrapperLeft,
+  .wrapperRight {
+    flex-direction: column;
+    width: 100%;
+    height: 1024px;
+  }
+
+  .firstImage {
+    height: 80%;
+    width: 84%;
+    left: -50px;
+  }
+
+  .secondImage {
+    height: 70%;
+    width: 72%;
+    right: -50px;
+  }
+
+  .button {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hr {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapperLeft,
+  .wrapperRight {
+    width: 100%;
+    height: 1024px;
+    padding: 2rem 0;
+    display: flex;
+  }
+
+  .rightTitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 730px) {
+  .wrapperLeft,
+  .wrapperRight {
+    width: 100%;
+    height: 1024px;
+    padding: 0 20px;
+  }
+
+  .readMoreButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rightTitle {
+    font-size: 40px;
+  }
+
+  .pillsContainer {
+    justify-content: center;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapperLeft,
+  .wrapperRight {
+    width: 100%;
+    height: 1224px;
+    padding: 0 10px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+
+  .rightTitle {
+    font-size: 30px;
+  }
+}

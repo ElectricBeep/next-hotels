@@ -1,0 +1,159 @@
+.container {
+  background-color: #e1f1df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+
+.wrapper {
+  width: 1424px;
+}
+
+.heading {
+  font-size: 50px;
+  font-weight: lighter;
+  color: #3a6b34;
+}
+
+.text {
+  color: rgb(60, 60, 60);
+  font-size: 20px;
+}
+
+.selectContainer {
+  padding: 50px 0;
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.span {
+  border: 1px solid #3a6b34;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #3a6b34;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeSpan {
+  border: 1px solid #3a6b34;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #3a6b34;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.span:hover,
+.activeSpan:hover {
+  transform: translateY(-2px);
+}
+
+.cardContainer {
+  display: flex;
+  gap: 70px;
+}
+
+.card {
+  width: 500px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 5px 35px 20px 35px;
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  transition: 0.3s all ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 5px 6px 5px rgba(0, 0, 0, 0.32);
+}
+
+.card h2 {
+  text-align: center;
+  color: rgb(60, 60, 60);
+}
+
+.cardIcon {
+  font-size: 40px;
+  color: #3a6b34;
+}
+
+.card p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: rgb(60, 60, 60);
+}
+
+.hr {
+  height: 2px;
+  background-color: gray;
+  border: none;
+}
+
+.card span {
+  font-weight: bold;
+  color: #3a6b34;
+}
+
+@media (max-width: 1600px) {
+  .wrapper {
+    max-width: 1124px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1062px) {
+  .cardContainer {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .selectContainer {
+    padding: 20px 0;
+    gap: 10px;
+  }
+
+  .card {
+    width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 350px;
+  }
+}

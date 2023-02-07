@@ -1,0 +1,183 @@
+.container {
+  background-color: #e1f1df;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 1424px;
+}
+
+.mainTitle {
+  font-weight: lighter;
+  font-size: 50px;
+  color: #3a6b34;
+}
+
+.contentContainer {
+  margin-top: 6rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.left {
+  flex: 1;
+}
+
+.item {
+  margin-bottom: 5px;
+  padding: 10px 20px;
+  border-bottom: 2px solid #3a6b34;
+  color: gray;
+}
+
+.item:hover {
+  color: #3a6b34;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  color: black;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+  line-height: 22px;
+  color: black;
+}
+
+.content.show {
+  height: auto;
+  max-height: 999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.right {
+  flex: 1;
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.text {
+  width: 400px;
+  color: gray;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 1124px;
+  }
+
+  .container {
+    height: fit-content;
+  }
+
+  .mainTitle {
+    margin-left: 20px;
+  }
+
+  .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .left {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .mainTitle {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .item {
+    font-size: 14px;
+  }
+
+  .text {
+    font-size: 15px;
+    width: 380px;
+  }
+
+  .img {
+    width: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 40px;
+  }
+
+  .contentContainer {
+    flex-direction: column;
+  }
+
+  .left {
+    margin-left: 0;
+  }
+
+  .item {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .img {
+    width: 580px;
+  }
+
+  .text {
+    width: 580px;
+  }
+}
+
+@media (max-width: 600px) {
+  .img {
+    width: 470px;
+  }
+
+  .text {
+    width: 470px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .item {
+    width: 85%;
+  }
+
+  .img {
+    width: 340px;
+  }
+
+  .text {
+    width: 300px;
+  }
+}
