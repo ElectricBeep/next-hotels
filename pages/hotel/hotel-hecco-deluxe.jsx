@@ -25,26 +25,22 @@ const HotelHeccoDeluxe = () => {
     },
     {
       id: 4,
-      img: "deluxe/deluxe4.jpg"
+      img: "deluxe/deluxe4.JPG"
     },
     {
       id: 5,
-      img: "deluxe/deluxe5.jpg"
+      img: "deluxe/deluxe5.JPG"
     },
     {
       id: 6,
-      img: "deluxe/deluxe6.jpg"
+      img: "deluxe/deluxe6.JPG"
     },
     {
       id: 7,
-      img: "deluxe/deluxe7.jpg"
-    },
-    {
-      id: 8,
       img: "deluxe/deluxe8.jpg"
     },
     {
-      id: 9,
+      id: 8,
       img: "deluxe/deluxe9.jpg"
     },
   ];
