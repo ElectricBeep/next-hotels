@@ -13,15 +13,15 @@ const HotelCosmopolit = () => {
   const photos = [
     {
       id: 1,
-      img: "cosmopolit/cosmopolit1.jpg"
+      img: "cosmopolit/cosmopolit11.jpg"
     },
     {
       id: 2,
-      img: "cosmopolit/cosmopolit2.jpg"
+      img: "cosmopolit/cosmopolit12.JPG"
     },
     {
       id: 3,
-      img: "cosmopolit/cosmopolit3.jpg"
+      img: "cosmopolit/cosmopolit13.JPG"
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ const HotelCosmopolit = () => {
     },
     {
       id: 8,
-      img: "cosmopolit/cosmopolit8.jpg"
+      img: "cosmopolit/cosmopolit18.JPG"
     },
   ];
 
