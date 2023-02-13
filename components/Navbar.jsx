@@ -76,21 +76,29 @@ const Navbar = () => {
           <div className={styles.rightMobileWrapper} onClick={() => setIsActive(false)}>
             <div className={styles.rightMobile} onClick={(e) => e.stopPropagation()}>
               <AiOutlineClose size={30} className={styles.closeIcon} onClick={() => setIsActive(false)} />
-              <Link onClick={() => setIsActive(false)} href="/">
-                Home
-              </Link>
-              <Link href="/hotel/hotel-cosmopolit" onClick={() => setIsActive(false)}>
-                Cosmopolit
-              </Link>
-              <Link href="/hotel/hotel-hecco-deluxe" onClick={() => setIsActive(false)}>
-                Hecco Deluxe
-              </Link>
-              <Link onClick={() => setIsActive(false)} href="/contact">
-                Contact
-              </Link>
-              <Link onClick={() => setIsActive(false)} href="/faq">
-                FAQ
-              </Link>
+              <div className={styles.rightMobileMenu}>
+                <hr />
+                <Link onClick={() => setIsActive(false)} href="/">
+                  Home
+                </Link>
+                <hr />
+                <Link href="/hotel/hotel-cosmopolit" onClick={() => setIsActive(false)}>
+                  Cosmopolit
+                </Link>
+                <hr />
+                <Link href="/hotel/hotel-hecco-deluxe" onClick={() => setIsActive(false)}>
+                  Hecco Deluxe
+                </Link>
+                <hr />
+                <Link onClick={() => setIsActive(false)} href="/contact">
+                  Contact
+                </Link>
+                <hr />
+                <Link onClick={() => setIsActive(false)} href="/faq">
+                  FAQ
+                </Link>
+                <hr />
+              </div>
             </div>
           </div>
         )}

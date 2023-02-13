@@ -59,7 +59,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Excellent hotel</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>10.0</div>
+                  </div>
                   <p>
                     Room was very clean and comfortable. Hotel is in the centre, heart of Sarajevo. The staff was very professional and kind.
                   </p>
@@ -72,7 +75,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Exceptional</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>10.0</div>
+                  </div>
                   <p>
                     We loved the hotel, everything was perfect. We had a parking place which is really important considering that hotel is located in city center. Stafd was really helpful.
                   </p>
@@ -85,7 +91,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Exceptional Hotel</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>10.0</div>
+                  </div>
                   <p>
                     Great place! Extremely friendly and helpful staff that helped me get around the Balkans and Sarajevo. The location is amazing and is in walking distance to all the sights!
                   </p>
@@ -101,7 +110,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Izuzetan</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>10.0</div>
+                  </div>
                   <p>
                     Prelijepo divna soba s pogledom na najljepsi grad, divno osoblje, cisto. Sve je za 10+
                   </p>
@@ -114,7 +126,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Excellent</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>8.0</div>
+                  </div>
                   <p>
                     The room was clean and had a great view of the city and had blackout blinds which was great as during the day the room was very light. Reception was very helpful and location was perfect.
                   </p>
@@ -127,7 +142,10 @@ const Testimonials = () => {
               <div className={styles.card}>
                 <div>
                   <h2>Very Good</h2>
-                  <ImQuotesRight className={styles.cardIcon} />
+                  <div className={styles.cardTop}>
+                    <ImQuotesRight className={styles.cardIcon} />
+                    <div className={styles.ratingContainer}>9.0</div>
+                  </div>
                   <p>
                     Very close to baščaršija. İncredible view of sarajevo. Nice helpful staff.
                   </p>

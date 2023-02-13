@@ -90,6 +90,24 @@
   color: rgb(60, 60, 60);
 }
 
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ratingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a6b34;
+  color: white;
+  padding: 7px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  border-bottom-left-radius: 0px;
+}
+
 .cardIcon {
   font-size: 40px;
   color: #3a6b34;

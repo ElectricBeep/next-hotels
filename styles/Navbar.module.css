@@ -140,13 +140,23 @@
   background: rgb(58, 107, 52);
   background: linear-gradient(152deg, rgba(58, 107, 52, 1) 0%, rgba(203, 210, 143, 1) 100%);
   z-index: 9;
+  color: white;
+}
+
+.rightMobileMenu {
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  color: white;
   font-weight: bold;
+}
+
+.rightMobileMenu a {
+  margin-left: 25px;
+  padding: 5px 0;
+}
+
+.rightMobileMenu hr {
+  width: 100%;
 }
 
 .closeIcon {
