@@ -3,13 +3,25 @@ import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import Gallery from "../../components/Gallery";
 import styles from "../../styles/HotelCosmopolit.module.css";
 import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    }
+  }
+}
+
 const HotelHeccoDeluxe = () => {
+  const { t } = useTranslation("common");
+
   const photos = [
     {
       id: 1,
@@ -74,7 +86,7 @@ const HotelHeccoDeluxe = () => {
                 </div>
                 <Link href="https://www.booking.com/hotel/ba/hecco-deluxe.en-gb.html?aid=356980&label=gog235jc-1DCAsoEkIMaGVjY28tZGVsdXhlSDNYA2gSiAEBmAEJuAEXyAEM2AED6AEBiAIBqAIDuAKg9PieBsACAdICJDZmN2Y4NzQ2LTZmNmEtNDZlZS1iYTk3LThlMGUyYjI4ODg4NNgCBOACAQ&sid=1ebcd1c25d8b009ffb9395189be3b58b&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&" target="_blank" className={styles.leftTopButton}>
                   <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
-                    BOOK NOW
+                    {t("cosmoBook")}
                   </motion.span>
                 </Link>
               </motion.div>
@@ -105,13 +117,13 @@ const HotelHeccoDeluxe = () => {
                   viewport={{ once: true, amoung: 0.25 }}
                 >
                   <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
-                    <b>Hotel Hecco Deluxe smješten je u samom srcu Sarajeva, u ulici Ferhadija 2, na posljednja 4 sprata visoke poslovne zgrade, odakle se pruža predivan pogled na cijeli grad i okolna brda.</b>
+                    <b>{t("deluxeDesc")}</b>
                   </motion.p>
                   <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
-                    Hotel u svom sastavu ima 12 soba te iste posjeduju klimu,  LCD TV, Cable-SAT, WiFi internet konekciju koja je besplatna za goste hotela, direktnu telefonsku liniju, mini bar, sef i savremena kupatila. Sve su sobe luksuzno opremljene i dizajnirane da udovolje potrebama turističkim i poslovnim putnicima. Zgrada je smještena u živahnoj sarajevskoj pješačkoj zoni. Caffe bar na 10. spratu pruža ugodan ambijent i utočište od svakodnevnih obaveza a panoramski pogled na grad ostavlja bez daha prilikom svakog posjeta.
+                    {t("deluxeDescTwo")}
                   </motion.p>
                   <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
-                    Zbog svoje centralne lokacije hotel je posebno pogodan za studijska i poslovna putovanja jer se nalazi u neposrednoj blizini svih glavnih državnih institucija, poslovnih i kulturnih centara, shopping centara te svih mjesta gdje se održava većina poslovnih skupova, sajmova  i događaja zabavnog karaktera.
+                    {t("deluxeDescThree")}
                   </motion.p>
                 </motion.div>
               </div>
@@ -133,7 +145,7 @@ const HotelHeccoDeluxe = () => {
             />
           </motion.div>
         </div>
-        <Gallery photos={photos} />
+        <Gallery photos={photos} t={t} />
       </div>
     </div>
   )

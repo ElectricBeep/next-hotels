@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/Details.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const Details = () => {
+const Details = ({ t }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

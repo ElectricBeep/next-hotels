@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 import { featuredPhotos } from "@/featuredPhotosData";
 import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import Link from "next/link";
-import { textVariant, slideIn, staggerContainer, textVariant2, textContainer, textVariant3 } from "../utils/motion";
+import { slideIn, staggerContainer, textVariant2, textContainer, textVariant3 } from "../utils/motion";
 
-const HeaderNew = ({ title }) => {
+const HeaderNew = ({ title, t }) => {
   const [current, setCurrent] = useState(0);
   const length = featuredPhotos.length;
 
@@ -42,7 +41,7 @@ const HeaderNew = ({ title }) => {
               className={styles.titleTop}
               variants={slideIn("left", "spring", 0.3, 1)}
             >
-              Welcome to
+              {t("headerTitleOne")}
             </motion.h2>
             <motion.h1
               className={styles.titleMid}
@@ -58,26 +57,26 @@ const HeaderNew = ({ title }) => {
               className={styles.titleBotTop}
               variants={slideIn("left", "spring", 0.9, 1)}
             >
-              Planning to visit <span className={styles.redText}>Sarajevo?</span>
+              {t("headerTitleTwo")} <span className={styles.redText}>Sarajevo?</span>
             </motion.h2>
             <motion.h2
               className={styles.titleBotMid}
               variants={slideIn("left", "spring", 1.0, 1.2)}
             >
-              Book your <span className={styles.bottomTitleSpan}>apartment</span>,
+              {t("headerTitleThree1")} <span className={styles.bottomTitleSpan}>{t("headerTitleThree2")}</span>,
             </motion.h2>
             <motion.h3
               className={styles.titleBotBot}
               variants={slideIn("left", "spring", 1.1, 1.5)}
             >
-              and secure your stay <span className={styles.bottomTitleSpanTwo}>right now!</span>
+              {t("headerTitleThree3")} <span className={styles.bottomTitleSpanTwo}>{t("headerTitleThree4")}</span>
             </motion.h3>
             <motion.a
               href="#hotels"
               className={styles.button}
               variants={slideIn("left", "spring", 1.2, 1.8)}
             >
-              BOOK NOW
+              {t("headerButton")}
             </motion.a>
           </div>
         </motion.div>
@@ -105,7 +104,7 @@ const HeaderNew = ({ title }) => {
               <motion.h2
                 variants={slideIn("up", "spring", 0.5, 1)}
               >
-                Welcome to
+                {t("headerTitleOne")}
               </motion.h2>
               <motion.h1>
                 {Array.from(title).map((letter, index) => (

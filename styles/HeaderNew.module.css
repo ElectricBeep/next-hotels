@@ -447,7 +447,7 @@
   }
 
   .button {
-    width: 130px;
+    width: 150px;
     font-size: 14px;
     padding: 10px 20px;
   }
@@ -541,6 +541,7 @@
   .titleBotTop {
     font-size: 32px;
     text-align: center;
+    line-height: 1;
   }
 
   .redText {

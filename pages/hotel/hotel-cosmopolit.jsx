@@ -3,13 +3,25 @@ import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsArrowDownCircle } from "react-icons/bs";
 import { motion } from "framer-motion";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import Gallery from "../../components/Gallery";
 import { hotelOneFeatures } from "../../hotelOneFeatures";
 import styles from "../../styles/HotelCosmopolit.module.css";
 import { slideIn, staggerContainer } from "../../utils/motion";
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    }
+  }
+}
+
 const HotelCosmopolit = () => {
+  const { t } = useTranslation("common");
+
   const photos = [
     {
       id: 1,
@@ -74,7 +86,7 @@ const HotelCosmopolit = () => {
                 </div>
                 <Link href="https://www.booking.com/hotel/ba/cosmopolit.hr.html" target="_blank" className={styles.leftTopButton}>
                   <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
-                    BOOK NOW
+                    {t("cosmoBook")}
                   </motion.span>
                 </Link>
               </motion.div>
@@ -105,14 +117,13 @@ const HotelCosmopolit = () => {
                   viewport={{ once: true, amoung: 0.25 }}
                 >
                   <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
-                    <b>Hotel se nalazi u strogom centru grada, tačnije u ulici Radićeva broj 15. Spoj je vrhunske udobnosti i kvalitete. Luksuznih 16 soba, opremljenih i dizajniranih po posljednjim svjetskim standardima, garancija su kvalitetnog i udobnog smještaja a naše gostoljubivo osoblje će dodatno upotpuniti vaš boravak u hotelu.</b>
+                    <b>{t("cosmopolitDesc")}</b>
                   </motion.p>
                   <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
-                    Bez obzira na razlog Vaše posjete sigurni smo da će Hotel Cosmopolit opravdati Vaš izbor kao i ukazano povjerenje.
-                    Hotel u svom sastavu ima 16 soba, od kojih je 10 dvokrevetnih i 6 jednokrevetnih te iste posjeduju klimu,  LCD TV, Cable-SAT, WiFi internet konekciju koja je besplatna za goste hotela, direktnu telefonsku liniju, mini bar, sef i savremena kupatila.
+                    {t("cosmoDescTwo")}
                   </motion.p>
                   <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
-                    Hotel posjeduje vlastiti parking prostor koji se dodatno ne naplaćuje (za koji je potrebna rezervacija) a zbog svoje centralne lokacije hotel je posebno pogodan za studijska i poslovna putovanja jer se nalazi u neposrednoj blizini svih glavnih državnih institucija, poslovnih i kulturnih centara, shopping centara te svih mjesta gdje se održava većina poslovnih skupova, sajmova  i događaja zabavnog karaktera.
+                    {t("cosmoDescThree")}
                   </motion.p>
                 </motion.div>
               </div>
@@ -134,7 +145,7 @@ const HotelCosmopolit = () => {
             />
           </motion.div>
         </div>
-        <Gallery photos={photos} />
+        <Gallery photos={photos} t={t} />
       </div>
     </div>
   )

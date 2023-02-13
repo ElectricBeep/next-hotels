@@ -7,23 +7,23 @@ import { FaInstagramSquare, FaViber } from "react-icons/fa";
 
 import styles from "../styles/Footer.module.css";
 
-const Footer = () => {
+const Footer = ({ t }) => {
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
-        <h1>Secure Your Stay Right Now!</h1>
+        <h1>{t("footerTitle")}</h1>
         <Link className={styles.topSectionAnchor} href="#hotels">
-          <span>BOOK NOW</span>
+          <span>{t("headerButton")}</span>
         </Link>
       </div>
       <div className={styles.wrapperContainer}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <h2>Hoteli Sarajevo</h2>
+            <h2>{t("navLogo")}</h2>
           </div>
           <div className={styles.mid}>
             <div className={styles.footerList}>
-              <div className={styles.itemTitle}>Contact Us!</div>
+              <div className={styles.itemTitle}>{t("footerContactUs")}</div>
               <div className={styles.footerItemListContainer}>
                 <div className={styles.footerItemList}>
                   <div className={styles.footerListItem}>
@@ -56,7 +56,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className={styles.hr} />
-      <p className={styles.footerBottom}>All rights reserved 2023</p>
+      <p className={styles.footerBottom}>{t("footerRights")}</p>
     </div>
   )
 }

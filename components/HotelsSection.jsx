@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/HotelsSection.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const HotelsSection = ({ direction, imgOne, imgTwo, features, hotelTitle, hotelDesc, linkOne, linkTwo }) => {
+const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelDesc, linkOne, linkTwo }) => {
 
   return (
     <div className={styles.container}>
@@ -19,7 +19,7 @@ const HotelsSection = ({ direction, imgOne, imgTwo, features, hotelTitle, hotelD
           viewport={{ once: true, amoung: 0.45 }}
         >
           <motion.span variants={slideIn("up", "spring", 0.3, 1)}>
-            Browser our Hotels
+            {t("hotelSectionHeader")}
           </motion.span>
         </motion.h1>
       )}
@@ -70,7 +70,7 @@ const HotelsSection = ({ direction, imgOne, imgTwo, features, hotelTitle, hotelD
                 className={styles.readMoreButton}
                 variants={direction === 'left' ? slideIn("right", "spring", 0.5, 1) : slideIn("left", "spring", 0.5, 1)}
               >
-                View Photos
+                {t("hotelsSectionButton")}
                 <FaArrowRight className={styles.leftBottomIcon} />
               </motion.button>
             </Link>
@@ -91,7 +91,7 @@ const HotelsSection = ({ direction, imgOne, imgTwo, features, hotelTitle, hotelD
                 className={styles.button}
                 variants={direction === 'left' ? slideIn("right", "spring", 0.8, 1) : slideIn("left", "spring", 0.8, 1)}
               >
-                BOOK NOW
+                {t("headerButton")}
               </motion.button>
             </Link>
             <hr className={styles.hr} />

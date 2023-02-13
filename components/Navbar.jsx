@@ -7,7 +7,7 @@ import { AiFillCaretDown, AiFillCaretUp, AiOutlineClose } from "react-icons/ai";
 
 import styles from "../styles/Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({ t }) => {
   const router = useRouter();
   const [showLanguageContainer, setShowLanguageContainer] = useState(false);
   const [showHotels, setShowHotels] = useState(false);
@@ -18,18 +18,18 @@ const Navbar = () => {
       <nav className={styles.navbar}>
         <div className={styles.left}>
           <Link href="/">
-            Hoteli Sarajevo
+            {t("navLogo")}
           </Link>
         </div>
         <div className={styles.right}>
           <Link href="/" className={styles.navLink}>
-            <span>Home</span>
+            <span>{t("navHeader")}</span>
           </Link>
           <div
             className={styles.navMoreMenu}
             onClick={() => setShowHotels((prev) => !prev)}
           >
-            <span>Hotels {showHotels ? <AiFillCaretUp size={14} /> : <AiFillCaretDown size={14} />}</span>
+            <span>{t("navHotels")} {showHotels ? <AiFillCaretUp size={14} /> : <AiFillCaretDown size={14} />}</span>
             {showHotels && (
               <div className={styles.moreMenuContainer}>
                 <Link href="/hotel/hotel-cosmopolit">
@@ -42,30 +42,29 @@ const Navbar = () => {
             )}
           </div>
           <Link href="/contact" className={styles.navLink}>
-            <span>Contact</span>
+            <span>{t("navContact")}</span>
           </Link>
           <Link href="/faq" className={styles.navLink}>
-            <span>FAQ</span>
+            <span>{t("navFAQ")}</span>
           </Link>
           <div className={styles.selectContainer}>
             <div
-              onMouseEnter={() => setShowLanguageContainer(true)}
-              onMouseLeave={() => setShowLanguageContainer(false)}
+              onClick={() => setShowLanguageContainer(!showLanguageContainer)}
             >
               <span>
                 {router.locale === "en"
-                  ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} />
-                  : <Image src="/img/bih.png" alt="bih flag" width={30} height={30} />}
+                  ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} style={{ cursor: "pointer" }} />
+                  : <Image src="/img/bih.png" alt="bih flag" width={30} height={30} style={{ cursor: "pointer" }} />}
               </span>
               {showLanguageContainer && (
                 <div className={styles.select}>
-                  {/* {router.locales.map(l => (
+                  {router.locales.map(l => (
                     <Link href={router.asPath} key={l} locale={l} className={styles.selectItem} onClick={() => setShowLanguageContainer(false)}>
                       {l === "en"
                         ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} />
-                        : <Image src="/img/croatia.png" alt="croatia flag" width={30} height={30} />}
+                        : <Image src="/img/bih.png" alt="bosnia flag" width={30} height={30} />}
                     </Link>
-                  ))} */}
+                  ))}
                 </div>
               )}
             </div>
@@ -79,7 +78,7 @@ const Navbar = () => {
               <div className={styles.rightMobileMenu}>
                 <hr />
                 <Link onClick={() => setIsActive(false)} href="/">
-                  Home
+                  {t("navHeader")}
                 </Link>
                 <hr />
                 <Link href="/hotel/hotel-cosmopolit" onClick={() => setIsActive(false)}>
@@ -91,11 +90,11 @@ const Navbar = () => {
                 </Link>
                 <hr />
                 <Link onClick={() => setIsActive(false)} href="/contact">
-                  Contact
+                  {t("navContact")}
                 </Link>
                 <hr />
                 <Link onClick={() => setIsActive(false)} href="/faq">
-                  FAQ
+                  {t("navFAQ")}
                 </Link>
                 <hr />
               </div>

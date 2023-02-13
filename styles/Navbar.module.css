@@ -105,6 +105,7 @@
 }
 
 .selectItem {
+  cursor: pointer;
   padding: 5px 6px;
 }
 

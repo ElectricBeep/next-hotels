@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/Testimonials.module.css"
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const Testimonials = () => {
+const Testimonials = ({ t }) => {
   const [active, setActive] = useState("cosmopolit")
 
   return (
@@ -21,17 +21,13 @@ const Testimonials = () => {
           className={styles.heading}
           variants={slideIn("down", "spring", 0.3, 1)}
         >
-          What our Customers Say
+          {t("testiTitle")}
         </motion.h1>
         <motion.p
           className={styles.text}
           variants={slideIn("down", "spring", 0.4, 1)}
         >
-          At our hotels, we take customer satisfaction to heart. Our top
-          priority is to ensure that every guest has a comfortable and memorable
-          stay with us. From the moment you walk through our doors, our friendly
-          and attentive staff go above and beyond to make sure all of your needs
-          are met.
+          {t("testiDesc")}
         </motion.p>
         <motion.div
           className={styles.selectContainer}

@@ -8,18 +8,29 @@ import { AiFillFacebook, AiFillPhone } from "react-icons/ai";
 import { BsEnvelopeFill, BsWhatsapp } from "react-icons/bs";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaViber } from "react-icons/fa";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import { slideIn, staggerContainer } from "../utils/motion";
 import styles from "../styles/Contact.module.css";
 import Head from "next/head";
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    }
+  }
+}
+
 const Contact = () => {
+  const { t } = useTranslation("common");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const [done, setDone] = useState(false);
+  const [done, setDone] = useState(true);
   const [error, setError] = useState(false);
   const formRef = useRef();
 
@@ -73,13 +84,13 @@ const Contact = () => {
               className={styles.headingTitle}
               variants={slideIn("up", "spring", 0.3, 1)}
             >
-              Contact us Today!
+              {t("contactTitle")}
             </motion.h1>
             <motion.p
               className={styles.headingSubtitle}
               variants={slideIn("up", "spring", 0.4, 1)}
             >
-              Please get in touch and we will answer all your questions.
+              {t("contactSubtitle")}
             </motion.p>
           </div>
         </motion.div>
@@ -97,7 +108,7 @@ const Contact = () => {
                   className={styles.botHeading}
                   variants={slideIn("up", "spring", 0.5, 1)}
                 >
-                  Our Contacts
+                  {t("contactOurContacts")}
                 </motion.h1>
                 <div className={styles.botLeftAddressContainer}>
                   <motion.div
@@ -142,7 +153,7 @@ const Contact = () => {
                 variants={slideIn("left", "spring", 0.8, 3)}
               >
                 <h1 className={styles.botHeading}>
-                  Our Social Media
+                  {t("contactOurSocial")}
                 </h1>
                 <div className={styles.socialIconsContainer}>
                   <Link href="https://www.facebook.com/hotelcosmopolit.sarajevo/" target="_blank" rel="noreferrer">
@@ -165,7 +176,7 @@ const Contact = () => {
                 className={styles.botHeading}
                 variants={slideIn("up", "spring", 0.5, 1)}
               >
-                Fill the Form Below to Contact Us!
+                {t("contactRightTitle")}
               </motion.h1>
               <form ref={formRef} className={styles.form} onSubmit={handleSubmit}>
                 <motion.input
@@ -174,7 +185,7 @@ const Contact = () => {
                   name="user_name"
                   onChange={(e) => setName(e.target.value)}
                   value={name}
-                  placeholder="Full Name"
+                  placeholder={t("contactFullName")}
                   className={styles.input}
                   required
                 />
@@ -184,7 +195,7 @@ const Contact = () => {
                   name="user_email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
-                  placeholder="Your Email"
+                  placeholder={t("contactEmail")}
                   className={styles.input}
                   required
                 />
@@ -194,7 +205,7 @@ const Contact = () => {
                   name="user_subject"
                   onChange={(e) => setSubject(e.target.value)}
                   value={subject}
-                  placeholder="Subject"
+                  placeholder={t("contactSubject")}
                   className={styles.input}
                   required
                 />
@@ -205,7 +216,7 @@ const Contact = () => {
                   value={text}
                   cols="30"
                   rows="10"
-                  placeholder="Your Message"
+                  placeholder={t("contactTextarea")}
                   className={styles.textarea}
                   required
                 />
@@ -215,14 +226,14 @@ const Contact = () => {
                   variants={slideIn("right", "spring", 0.75, 3)}
                 >
                   {isSending
-                    ? <span>Sending...</span>
-                    : <span>SEND</span>}
+                    ? <span>{t("contactSending")}</span>
+                    : <span>{t("contactSend")}</span>}
                 </motion.button>
                 <span className={styles.alert} style={done ? { color: "green" } : { color: "transparent" }}>
-                  Your Message was Sent Successfully
+                  {t("contactSuccess")}
                 </span>
                 <span className={styles.alert} style={error ? { color: "red" } : { color: "transparent" }}>
-                  There was an Error, Please Try Again
+                  {t("contactFailure")}
                 </span>
               </form>
             </motion.div>

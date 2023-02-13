@@ -7,54 +7,54 @@ import { motion } from "framer-motion";
 import styles from "../styles/PhotoSlider.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const PhotoSlider = () => {
+const PhotoSlider = (props) => {
   const slides = [
     {
       id: 1,
       img: "sebilj.jpg",
-      title: "Explore Baščaršija",
+      title: props.t("photoSilderFirst"),
       link: "https://en.wikipedia.org/wiki/Ba%C5%A1%C4%8Dar%C5%A1ija"
     },
     {
       id: 2,
       img: "kazandziluk.jpg",
-      title: "Browser Kazandžiluk",
+      title: props.t("photoSilderTwo"),
       link: "https://sr.wikipedia.org/sr-el/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%9F%D0%B8%D0%BB%D1%83%D0%BA"
     },
     {
       id: 3,
       img: "blend.jpg",
-      title: "Blend of Ease and West",
+      title: props.t("photoSliderThree"),
       link: "https://en.wikipedia.org/wiki/Sarajevo"
     },
     {
       id: 4,
       img: "ferhadija.jpg",
-      title: "Walk through Ferhadija",
+      title: props.t("photoSliderFour"),
       link: "https://en.wikipedia.org/wiki/Ferhadija_street"
     },
     {
       id: 5,
       img: "clockTower.jpg",
-      title: "Visit Clock Tower",
+      title: props.t("photoSliderFive"),
       link: "https://en.wikipedia.org/wiki/Sarajevo_Clock_Tower"
     },
     {
       id: 6,
       img: "husrev.jpg",
-      title: "See Gazi Husrev-beg Mosque",
+      title: props.t("photoSliderSix"),
       link: "https://en.wikipedia.org/wiki/Gazi_Husrev-beg_Mosque"
     },
     {
       id: 7,
       img: "bezistan.jpg",
-      title: "Experience Bezistan",
+      title: props.t("photoSliderSeven"),
       link: "https://en.wikipedia.org/wiki/Gazi_Husrev-begov_bezistan"
     },
     {
       id: 8,
       img: "cityHall.jpg",
-      title: "Visit the City Hall",
+      title: props.t("photoSliderEight"),
       link: "https://en.wikipedia.org/wiki/Vije%C4%87nica"
     },
   ];
@@ -96,7 +96,7 @@ const PhotoSlider = () => {
             <h2 className={styles.sliderCardTitle}>{slide.title}</h2>
             <Link href={slide.link} target="_blank" rel="noreferrer">
               <div className={styles.sliderMore}>
-                <div>Read More</div><BsArrowRightShort size={30} />
+                <div>{props.t("photoSliderReadMore")}</div><BsArrowRightShort size={30} />
               </div>
             </Link>
           </motion.div>

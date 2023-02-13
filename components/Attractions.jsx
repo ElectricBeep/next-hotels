@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/Attractions.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const Attractions = () => {
+const Attractions = ({ t }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -17,7 +17,7 @@ const Attractions = () => {
           viewport={{ once: true, amoung: 0.25 }}
         >
           <motion.span variants={slideIn("up", "spring", 0.3, 1)}>
-            Attractions in Sarajevo
+            {t("attractionsTitle")}
           </motion.span>
         </motion.h1>
         <hr className={styles.hr} />
@@ -33,22 +33,22 @@ const Attractions = () => {
               className={styles.title}
               variants={slideIn("left", "spring", 0.4, 1)}
             >
-              What are you looking for?
+              {t("attractionsDescTitle")}
             </motion.h1>
             <motion.h2 variants={slideIn("left", "spring", 0.5, 1)}>
-              <span className={styles.subtitleFirstWord}>Attractions</span>, <span className={styles.subtitle}>History, Events, Experience, Discover, Culture, Shopping...</span>
+              <span className={styles.subtitleFirstWord}>{t("attractionsTextFirst")}</span>, <span className={styles.subtitle}>{t("attractionsTextSecond")}</span>
             </motion.h2>
             <motion.div
               className={styles.leftBottom}
               variants={slideIn("up", "spring", 0.6, 1)}
             >
-              Sarajevo is waiting for you!
+              {t("attractionsSubtitle")}
             </motion.div>
           </motion.div>
           <div className={styles.right}>
             <div className={styles.wrapper}>
               <div className={styles.cardContainer}>
-                <PhotoSlider />
+                <PhotoSlider t={t} />
               </div>
             </div>
           </div>

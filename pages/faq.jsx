@@ -2,12 +2,23 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { motion } from "framer-motion";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 import Details from "../components/Details";
 import styles from "../styles/FAQ.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+    }
+  }
+}
+
 const FAQ = () => {
+  const { t } = useTranslation("common");
   const [selected, setSelected] = useState(null);
 
   const handleToggle = (i) => {
@@ -66,7 +77,7 @@ const FAQ = () => {
               className={styles.mainTitle}
               variants={slideIn("up", "spring", 0.2, 1)}
             >
-              A Few Common Questions
+              {t("faqTitle")}
             </motion.h1>
           </motion.div>
           <div className={styles.contentContainer}>
@@ -113,14 +124,14 @@ const FAQ = () => {
                   className={styles.text}
                   variants={slideIn("right", "spring", 0.3, 1)}
                 >
-                  In 1540, the capital of Bosnia and Herzegovina received the first shopping center that still exists today, it is a bezistan.
+                  {t("faqDesc")}
                 </motion.div>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
-      <Details />
+      <Details t={t} />
     </>
   )
 }

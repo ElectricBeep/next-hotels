@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import styles from "../styles/Gallery.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const Gallery = ({ photos }) => {
+const Gallery = ({ photos, t }) => {
 
   const [current, setCurrent] = useState(0);
   const length = photos.length;
@@ -36,7 +36,7 @@ const Gallery = ({ photos }) => {
         viewport={{ once: true, amoung: 0.25 }}
       >
         <motion.h1 variants={slideIn("up", "spring", 0.3, 1)}>
-          Hotel Images Gallery
+          {t("galleryTitle")}
         </motion.h1>
         <motion.div
           className={styles.imgContainer}
