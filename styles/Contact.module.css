@@ -187,7 +187,7 @@
   }
 
   .botContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .botRight {
@@ -232,7 +232,7 @@
 
   .midCardContainer {
     width: 100%;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 1rem;
   }
 
@@ -241,7 +241,7 @@
   }
 
   .botContainer {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .botLeft {

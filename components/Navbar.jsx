@@ -79,28 +79,12 @@ const Navbar = () => {
               <Link onClick={() => setIsActive(false)} href="/">
                 Home
               </Link>
-              <div
-                className={styles.navMoreMenuMobile}
-                onClick={() => setShowHotels((prev) => !prev)}
-              >
-                <span>Hotels {showHotels ? <AiFillCaretUp size={14} /> : <AiFillCaretDown size={14} />}</span>
-                {showHotels && (
-                  <div className={styles.moreMenuContainer}>
-                    <Link
-                      href="/hotel/hotel-cosmopolit"
-                      onClick={() => setIsActive(false)}
-                    >
-                      Cosmopolit
-                    </Link>
-                    <Link
-                      href="/hotel/hotel-hecco-deluxe"
-                      onClick={() => setIsActive(false)}
-                    >
-                      Hecco Deluxe
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link href="/hotel/hotel-cosmopolit" onClick={() => setIsActive(false)}>
+                Cosmopolit
+              </Link>
+              <Link href="/hotel/hotel-hecco-deluxe" onClick={() => setIsActive(false)}>
+                Hecco Deluxe
+              </Link>
               <Link onClick={() => setIsActive(false)} href="/contact">
                 Contact
               </Link>
