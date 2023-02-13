@@ -21,9 +21,9 @@ const Details = ({ t }) => {
             variants={slideIn("up", "spring", 0.4, 1)}
           >
             <BsGlobe className={styles.icon} />
-            <h2>Language</h2>
+            <h2>{t("detailsOneTitle")}</h2>
             <p>
-              The main official languages of Bosnia and Herzegovina are Bosnian, Croation and Serbian. Besides the Shtokavian dialect, on which Standard language is based, there are two other main dialects spoken on the territory of Bosnia, Chakavian and Kajkavian.
+              {t("detailsOneText")}
             </p>
           </motion.div>
           <motion.div
@@ -31,9 +31,9 @@ const Details = ({ t }) => {
             variants={slideIn("up", "spring", 0.4, 1)}
           >
             <AiOutlineEuroCircle className={styles.icon} />
-            <h2>What's Bosnia's currency?</h2>
+            <h2>{t("detailsTwoTitle")}</h2>
             <p>
-              The official currency of Bosnia and Herzegovia is the convertible mark (BAM).
+              {t("detailsTwoText")}
             </p>
           </motion.div>
           <motion.div
@@ -41,8 +41,8 @@ const Details = ({ t }) => {
             variants={slideIn("up", "spring", 0.4, 1)}
           >
             <AiOutlineClockCircle className={styles.icon} />
-            <h2>Time zone</h2>
-            <p>Central European Standard Time (GMT+1)</p>
+            <h2>{t("detailsThreeTitle")}</h2>
+            <p>{t("detailsThreeText")}</p>
           </motion.div>
         </motion.div>
       </div>
