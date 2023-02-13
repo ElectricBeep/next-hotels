@@ -32,28 +32,28 @@ const FAQ = () => {
   const questions = [
     {
       id: 1,
-      question: "What's the best time of year to visit Sarajevo?",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi."
+      question: t("faqQOne"),
+      answer: t("faqAOne")
     },
     {
       id: 2,
-      question: "Do I need passport of visa to enter the country?",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi."
+      question: t("faqQTwo"),
+      answer: t("faqATwo")
     },
     {
       id: 3,
-      question: "What are some basic facts about Sarajevo?",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi."
+      question: t("faqQThree"),
+      answer: t("faqAThree")
     },
     {
       id: 4,
-      question: "Where should I go in Sarajevo?",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi."
+      question: t("faqQFour"),
+      answer: t("faqAFour")
     },
     {
       id: 5,
-      question: "What major event happened in Sarajevo?",
-      answer: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate inventore incidunt sunt ex, vero vel? Placeat, incidunt atque, rerum minus laborum error eius doloremque excepturi soluta in eveniet consectetur animi."
+      question: t("faqQFive"),
+      answer: t("faqAFive")
     },
   ];
 
@@ -63,7 +63,7 @@ const FAQ = () => {
         <title>Sarajevo Hotels FAQ</title>
         <meta name="description" content="Sarajevo Hotels FAQ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/hotel.png" />
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>

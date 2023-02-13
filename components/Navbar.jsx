@@ -53,8 +53,8 @@ const Navbar = ({ t }) => {
             >
               <span>
                 {router.locale === "en"
-                  ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} style={{ cursor: "pointer" }} />
-                  : <Image src="/img/bih.png" alt="bih flag" width={30} height={30} style={{ cursor: "pointer" }} />}
+                  ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} className={styles.selectContainerImage} />
+                  : <Image src="/img/bih.png" alt="bih flag" width={30} height={30} className={styles.selectContainerImage} />}
               </span>
               {showLanguageContainer && (
                 <div className={styles.select}>

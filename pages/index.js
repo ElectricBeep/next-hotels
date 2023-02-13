@@ -27,7 +27,7 @@ export default function Home() {
         <title>Sarajevo Hotels</title>
         <meta name="description" content="Sarajevo Hotels" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/hotel.png" />
       </Head>
       <main className={styles.main}>
         <HeaderNew title="SARAJEVO" t={t} />

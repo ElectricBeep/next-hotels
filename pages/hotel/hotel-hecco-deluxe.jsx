@@ -10,6 +10,7 @@ import Gallery from "../../components/Gallery";
 import styles from "../../styles/HotelCosmopolit.module.css";
 import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
+import Head from "next/head";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -58,96 +59,104 @@ const HotelHeccoDeluxe = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.top}>
-          <div className={styles.left}>
-            <div>
-              <motion.div
-                className={styles.leftTop}
-                variants={staggerContainer}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amoung: 0.25 }}
-              >
-                <div>
-                  <motion.h1
-                    className={styles.leftTopTitle}
-                    variants={slideIn("up", "spring", 0.3, 1)}
-                  >
-                    Hotel Hecco Deluxe
-                  </motion.h1>
-                  <motion.span
-                    className={styles.leftTopSpan}
-                    variants={slideIn("up", "spring", 0.4, 1)}
-                  >
-                    <FaMapMarkerAlt /> Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina
-                  </motion.span>
-                </div>
-                <Link href="https://www.booking.com/hotel/ba/hecco-deluxe.en-gb.html?aid=356980&label=gog235jc-1DCAsoEkIMaGVjY28tZGVsdXhlSDNYA2gSiAEBmAEJuAEXyAEM2AED6AEBiAIBqAIDuAKg9PieBsACAdICJDZmN2Y4NzQ2LTZmNmEtNDZlZS1iYTk3LThlMGUyYjI4ODg4NNgCBOACAQ&sid=1ebcd1c25d8b009ffb9395189be3b58b&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&" target="_blank" className={styles.leftTopButton}>
-                  <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
-                    {t("cosmoBook")}
-                  </motion.span>
-                </Link>
-              </motion.div>
-              <div className={styles.leftBot}>
+    <>
+      <Head>
+        <title>Hotel Hecco Deluxe Sarajevo</title>
+        <meta name="description" content="Hotel Hecco Deluxe Sarajevo" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/hotel.png" />
+      </Head>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <div className={styles.top}>
+            <div className={styles.left}>
+              <div>
                 <motion.div
-                  className={styles.pillsContainer}
+                  className={styles.leftTop}
                   variants={staggerContainer}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amoung: 0.25 }}
                 >
-                  {hotelTwoFeatures.map((feature, i) => (
-                    <motion.div
-                      className={styles.pill}
-                      key={feature.id}
-                      variants={slideIn("left", "spring", i * 0.2, 2.5)}
+                  <div>
+                    <motion.h1
+                      className={styles.leftTopTitle}
+                      variants={slideIn("up", "spring", 0.3, 1)}
                     >
-                      {feature.feature}
-                      {feature.icon}
-                    </motion.div>
-                  ))}
+                      Hotel Hecco Deluxe
+                    </motion.h1>
+                    <motion.span
+                      className={styles.leftTopSpan}
+                      variants={slideIn("up", "spring", 0.4, 1)}
+                    >
+                      <FaMapMarkerAlt /> Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina
+                    </motion.span>
+                  </div>
+                  <Link href="https://www.booking.com/hotel/ba/hecco-deluxe.en-gb.html?aid=356980&label=gog235jc-1DCAsoEkIMaGVjY28tZGVsdXhlSDNYA2gSiAEBmAEJuAEXyAEM2AED6AEBiAIBqAIDuAKg9PieBsACAdICJDZmN2Y4NzQ2LTZmNmEtNDZlZS1iYTk3LThlMGUyYjI4ODg4NNgCBOACAQ&sid=1ebcd1c25d8b009ffb9395189be3b58b&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&" target="_blank" className={styles.leftTopButton}>
+                    <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
+                      {t("cosmoBook")}
+                    </motion.span>
+                  </Link>
                 </motion.div>
-                <motion.div
-                  className={styles.leftBotTextContainer}
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amoung: 0.25 }}
-                >
-                  <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
-                    <b>{t("deluxeDesc")}</b>
-                  </motion.p>
-                  <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
-                    {t("deluxeDescTwo")}
-                  </motion.p>
-                  <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
-                    {t("deluxeDescThree")}
-                  </motion.p>
-                </motion.div>
+                <div className={styles.leftBot}>
+                  <motion.div
+                    className={styles.pillsContainer}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amoung: 0.25 }}
+                  >
+                    {hotelTwoFeatures.map((feature, i) => (
+                      <motion.div
+                        className={styles.pill}
+                        key={feature.id}
+                        variants={slideIn("left", "spring", i * 0.2, 2.5)}
+                      >
+                        {feature.feature}
+                        {feature.icon}
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                  <motion.div
+                    className={styles.leftBotTextContainer}
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amoung: 0.25 }}
+                  >
+                    <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
+                      <b>{t("deluxeDesc")}</b>
+                    </motion.p>
+                    <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
+                      {t("deluxeDescTwo")}
+                    </motion.p>
+                    <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
+                      {t("deluxeDescThree")}
+                    </motion.p>
+                  </motion.div>
+                </div>
               </div>
+              <BsArrowDownCircle className={styles.leftDownIcon} />
             </div>
-            <BsArrowDownCircle className={styles.leftDownIcon} />
+            <motion.div
+              className={styles.right}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amoung: 0.25 }}
+            >
+              <motion.img
+                variants={slideIn("right", "spring", 0.4, 1)}
+                src="/img/featured/featured2.jpg"
+                alt="hotel hecco deluxe"
+                className={styles.rightImg}
+              />
+            </motion.div>
           </div>
-          <motion.div
-            className={styles.right}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amoung: 0.25 }}
-          >
-            <motion.img
-              variants={slideIn("right", "spring", 0.4, 1)}
-              src="/img/featured/featured2.jpg"
-              alt="hotel hecco deluxe"
-              className={styles.rightImg}
-            />
-          </motion.div>
+          <Gallery photos={photos} t={t} />
         </div>
-        <Gallery photos={photos} t={t} />
       </div>
-    </div>
+    </>
   )
 }
 
