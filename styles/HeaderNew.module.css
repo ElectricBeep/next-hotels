@@ -1,5 +1,5 @@
 .container {
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   display: flex;
   padding: 0 5rem;
   height: calc(100vh - 60px);
@@ -31,7 +31,7 @@
 
 .titleTop {
   line-height: 0;
-  color: #3a6b34;
+  color: #1e3d58;
   font-weight: lighter;
   font-size: 88px;
 }
@@ -53,7 +53,7 @@
 
 .redText {
   font-size: 44px;
-  color: red;
+  color: #1e3d58;
 }
 
 .titleBotMid {
@@ -65,7 +65,7 @@
 
 .bottomTitleSpan {
   font-weight: bold;
-  color: #3a6b34;
+  color: #1e3d58;
   font-size: 54px;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .bottomTitleSpanTwo {
-  color: red;
+  color: #1e3d58;
   font-size: 38px;
 }
 
@@ -92,7 +92,7 @@
   padding: 15px 25px;
   border-radius: 50px;
   color: white;
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   font-weight: bold;
   cursor: pointer;
   font-size: 17px;
@@ -106,7 +106,7 @@
 .button:hover {
   transform: scale(0.9);
   background-color: white;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .right {
@@ -130,7 +130,7 @@
 .arrowIconContainer {
   position: absolute;
   top: 50%;
-  background-color: #cbd28f5c;
+  background-color: #998e8e5c;
   color: white;
   border-radius: 50%;
   padding: 10px;
@@ -142,7 +142,7 @@
 }
 
 .arrowIconContainer:hover {
-  background-color: #cbd28f;
+  background-color: #1e3d58;
   color: white;
 }
 
@@ -246,7 +246,7 @@
 }
 
 .activeDot {
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 @media (max-width: 1720px) {

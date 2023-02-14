@@ -1,5 +1,5 @@
 .container {
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
@@ -35,7 +35,7 @@
 
 .leftTopSpan {
   font-weight: bold;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .leftTopButton {
@@ -43,7 +43,7 @@
   padding: 15px 35px;
   border-radius: 50px;
   color: white;
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s all ease;
@@ -52,7 +52,7 @@
 .leftTopButton:hover {
   transform: scale(0.9);
   background-color: white;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .leftBot {
@@ -75,13 +75,13 @@
   border-radius: 30px;
   font-weight: bold;
   background-color: white;
-  border: 1px solid #3a6b34;
-  color: #3a6b34;
+  border: 1px solid #1e3d58;
+  color: #1e3d58;
   transition: all 0.3s ease;
 }
 
 .pill:hover {
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   color: white;
 }
 
@@ -94,7 +94,7 @@
   margin-left: auto;
   margin-right: auto;
   font-size: 40px;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .right {

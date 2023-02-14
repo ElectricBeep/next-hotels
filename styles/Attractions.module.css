@@ -1,5 +1,5 @@
 .container {
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,14 +14,14 @@
 .heading {
   font-size: 50px;
   font-weight: lighter;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .hr {
   height: 2px;
   border-width: 0;
   color: gray;
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   margin: 2rem 0;
 }
 
@@ -39,7 +39,7 @@
 
 .title,
 .subtitleFirstWord {
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .subtitle {

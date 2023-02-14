@@ -1,5 +1,5 @@
 .container {
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   padding: 2rem 0;
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
 .one h2,
 .two h2,
 .three h2 {
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .one p,

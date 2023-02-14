@@ -1,5 +1,5 @@
 .container {
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@
 .mainTitle {
   font-weight: lighter;
   font-size: 50px;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .contentContainer {
@@ -29,12 +29,12 @@
 .item {
   margin-bottom: 5px;
   padding: 10px 20px;
-  border-bottom: 2px solid #3a6b34;
+  border-bottom: 2px solid #1e3d58;
   color: gray;
 }
 
 .item:hover {
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .title {

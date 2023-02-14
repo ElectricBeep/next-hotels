@@ -1,6 +1,6 @@
 .container {
   overflow-x: hidden;
-  background-color: #e1f1df;
+  background-color: #dae3eb;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,7 +25,7 @@
 .heading {
   font-size: 50px;
   font-weight: lighter;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .left {
@@ -88,7 +88,7 @@
 }
 
 .readMoreButton:hover {
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   color: white;
 }
 
@@ -112,13 +112,13 @@
   border-radius: 30px;
   font-weight: bold;
   background-color: white;
-  border: 1px solid #3a6b34;
-  color: #3a6b34;
+  border: 1px solid #1e3d58;
+  color: #1e3d58;
   transition: all 0.3s ease;
 }
 
 .pill:hover {
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   color: white;
 }
 
@@ -130,7 +130,7 @@
   padding: 15px 25px;
   border-radius: 50px;
   color: white;
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   font-weight: bold;
   cursor: pointer;
   font-size: 17px;
@@ -140,11 +140,11 @@
 .button:hover {
   transform: scale(0.9);
   background-color: #e1f1df;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .hr {
-  background-color: #3a6b34;
+  background-color: #1e3d58;
   height: 3px;
 }
 
@@ -243,6 +243,12 @@
 }
 
 @media (max-width: 480px) {
+  .rightText {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
   .wrapperLeft,
   .wrapperRight {
     width: 100%;
@@ -251,6 +257,7 @@
   }
 
   .heading {
+    text-align: center;
     font-size: 40px;
   }
 

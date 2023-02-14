@@ -6,9 +6,8 @@
 
 .topSection {
   height: 80px;
-  background: #3a6b34;
-  background: rgb(58, 107, 52);
-  background: linear-gradient(152deg, rgba(58, 107, 52, 1) 0%, rgba(203, 210, 143, 1) 100%);
+  background: #1e3d58;
+  background: linear-gradient(152deg, rgba(30, 61, 88) 0%, rgb(170, 176, 182) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +53,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  background: #3a6b34;
+  background: #1e3d58;
   transition: all 0.35s;
 }
 
@@ -132,7 +131,7 @@
 }
 
 .icon:hover {
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .hr {
@@ -229,5 +228,6 @@
 @media (max-width: 480px) {
   .topSection h1 {
     font-size: 30px;
+    text-align: center;
   }
 }

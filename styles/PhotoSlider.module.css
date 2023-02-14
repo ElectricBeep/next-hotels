@@ -31,7 +31,7 @@
 .sliderCardTitle {
   font-weight: 500;
   margin-top: 10px;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .sliderCardDesc {
@@ -63,7 +63,7 @@
 .sliderIcon.left,
 .sliderIcon.right {
   z-index: 4;
-  background: #cbd28f5c;
+  background: #998e8e5c;
   color: black;
   border-radius: 100%;
   position: absolute;
@@ -82,7 +82,7 @@
 .sliderIcon.left:hover,
 .sliderIcon.right:hover {
   color: white;
-  background-color: #3a6b34;
+  background-color: #1e3d58;
 }
 
 .sliderCard {
@@ -110,7 +110,7 @@
 }
 
 .sliderMore:hover {
-  color: #3a6b34;
+  color: #1e3d58;
   transform: translateX(3px);
 }
 

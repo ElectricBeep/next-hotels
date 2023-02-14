@@ -30,7 +30,7 @@ const Contact = () => {
   const [subject, setSubject] = useState("");
   const [text, setText] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const [done, setDone] = useState(true);
+  const [done, setDone] = useState(false);
   const [error, setError] = useState(false);
   const formRef = useRef();
 

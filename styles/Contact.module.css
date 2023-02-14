@@ -1,6 +1,6 @@
 .container {
   overflow: hidden;
-  background-color: #e1f1df;
+  background-color: #dae3eb;
 }
 
 .top {
@@ -98,7 +98,7 @@
 
 .icon {
   font-size: 22px;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .socialIconsContainer {
@@ -110,7 +110,7 @@
 .socialIcon {
   font-size: 40px;
   cursor: pointer;
-  color: #3a6b34;
+  color: #1e3d58;
   transition: 0.3s all ease;
 }
 
@@ -125,7 +125,7 @@
 
 .botHeading {
   font-weight: lighter;
-  color: #3a6b34;
+  color: #1e3d58;
 }
 
 .form {
@@ -148,14 +148,14 @@
 
 .input:focus,
 .textarea:focus {
-  outline-color: #3a6b34;
+  outline-color: #1e3d58;
 }
 
 .sendButton {
   margin-top: 0.5rem;
   width: 100%;
   padding: 1rem 0;
-  background: #3a6b34;
+  background: #1e3d58;
   border-radius: 5px;
   color: white;
   border: none;
