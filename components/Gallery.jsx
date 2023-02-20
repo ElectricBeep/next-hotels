@@ -46,7 +46,7 @@ const Gallery = ({ photos, t }) => {
             <FiChevronLeft className={styles.icon} />
           </div>
           <div className={styles.dotContainer}>
-            {photos.length < 13 && photos.map((img, index) => (
+            {photos.map((img, index) => (
               <div key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeDot : styles.dot}>
                 &#9679;
               </div>
@@ -55,7 +55,7 @@ const Gallery = ({ photos, t }) => {
           {photos.map((img, index) => (
             <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
               {index === current && (
-                <img src={`/img/${img.img}`} alt={img.title} className={styles.img} />
+                <img src={`/img/${img.img}`} data-src={`/img/${img.img}.jpg`} alt={img.title} className={styles.img} loading="lazy" />
               )}
             </div>
           ))}
@@ -64,7 +64,7 @@ const Gallery = ({ photos, t }) => {
           </div>
         </motion.div>
         <div className={styles.smallImgContainer}>
-          {photos.length < 13 && photos.map((img, index) => (
+          {photos.map((img, index) => (
             <img src={`/img/${img.img}`} key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeSmallImg : styles.smallImg} />
           ))}
         </div>

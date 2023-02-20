@@ -61,14 +61,14 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             </motion.h1>
             <motion.p
               className={styles.rightText}
-              variants={direction === 'left' ? slideIn("right", "spring", 0.45, 1) : slideIn("left", "spring", 0.45, 1)}
+              variants={direction === 'left' ? slideIn("right", "spring", 0.45, 2) : slideIn("left", "spring", 0.45, 2)}
             >
               {hotelDesc}
             </motion.p>
             <Link href={`/hotel/${linkOne}`}>
               <motion.button
                 className={styles.readMoreButton}
-                variants={direction === 'left' ? slideIn("right", "spring", 0.5, 1) : slideIn("left", "spring", 0.5, 1)}
+                variants={direction === 'left' ? slideIn("right", "spring", 0.5, 2) : slideIn("left", "spring", 0.5, 2)}
               >
                 {t("hotelsSectionButton")}
                 <FaArrowRight className={styles.leftBottomIcon} />
@@ -89,7 +89,7 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             <Link href={linkTwo} target="_blank">
               <motion.button
                 className={styles.button}
-                variants={direction === 'left' ? slideIn("right", "spring", 0.8, 1) : slideIn("left", "spring", 0.8, 1)}
+                variants={direction === 'left' ? slideIn("right", "spring", 0.8, 2) : slideIn("left", "spring", 0.8, 2)}
               >
                 {t("headerButton")}
               </motion.button>
