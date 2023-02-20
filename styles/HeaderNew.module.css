@@ -40,7 +40,7 @@
 .titleMid {
   margin-top: 10px;
   text-indent: 50%;
-  line-height: 0;
+  line-height: 0.1;
   font-size: 135px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
