@@ -34,6 +34,7 @@
   color: #1e3d58;
   font-weight: lighter;
   font-size: 88px;
+  font-family: "Oxanium", cursive;
 }
 
 .titleMid {
@@ -43,17 +44,20 @@
   font-size: 135px;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Oxanium", cursive;
 }
 
 .titleBotTop {
   line-height: 30px;
   font-size: 38px;
   font-weight: lighter;
+  font-family: "Oxanium", cursive;
 }
 
 .redText {
   font-size: 44px;
   color: #1e3d58;
+  font-family: "Oxanium", cursive;
 }
 
 .titleBotMid {
@@ -61,12 +65,14 @@
   line-height: 0.5;
   font-size: 36px;
   font-weight: lighter;
+  font-family: "Oxanium", cursive;
 }
 
 .bottomTitleSpan {
   font-weight: bold;
   color: #1e3d58;
-  font-size: 54px;
+  font-size: 57px;
+  font-family: "Oxanium", cursive;
 }
 
 .titleBotBot {
@@ -74,11 +80,13 @@
   line-height: 0;
   font-size: 31px;
   font-weight: lighter;
+  font-family: "Oxanium", cursive;
 }
 
 .bottomTitleSpanTwo {
   color: #1e3d58;
   font-size: 38px;
+  font-family: "Oxanium", cursive;
 }
 
 .button {
@@ -101,6 +109,7 @@
   box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
   -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
   -moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.64);
+  font-family: "Oxanium", cursive;
 }
 
 .button:hover {
@@ -181,6 +190,7 @@
   line-height: 0;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: "Oxanium", cursive;
 }
 
 .mobileTitleContainer h1 {
@@ -189,7 +199,7 @@
   line-height: 0.5;
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-family: "Courgette", cursive;
+  font-family: "Oxanium", cursive;
 }
 
 .img {
@@ -249,17 +259,14 @@
   color: #1e3d58;
 }
 
-@media (max-width: 1720px) {
+@media (max-width: 1840px) {
   .titleTop {
-    font-size: 76px;
-  }
-
-  .titleMid {
-    font-size: 125px;
+    font-size: 82px;
+    line-height: 0.5;
   }
 
   .titleBotTop {
-    font-size: 32px;
+    font-size: 36px;
   }
 
   .redText {
@@ -267,7 +274,41 @@
   }
 
   .titleBotMid {
-    font-size: 34px;
+    font-size: 39px;
+  }
+
+  .bottomTitleSpan {
+    font-size: 49px;
+  }
+
+  .titleBotBot {
+    font-size: 29px;
+  }
+
+  .bottomTitleSpanTwo {
+    font-size: 37px;
+  }
+}
+
+@media (max-width: 1720px) {
+  .titleTop {
+    font-size: 70px;
+  }
+
+  .titleMid {
+    font-size: 125px;
+  }
+
+  .titleBotTop {
+    font-size: 30px;
+  }
+
+  .redText {
+    font-size: 36px;
+  }
+
+  .titleBotMid {
+    font-size: 32px;
   }
 
   .bottomTitleSpan {
@@ -279,15 +320,15 @@
   }
 
   .bottomTitleSpanTwo {
-    font-size: 35px;
-  }
-
-  .button {
-    width: 250px;
+    font-size: 29px;
   }
 }
 
 @media (max-width: 1530px) {
+  .container {
+    padding: 0 2rem;
+  }
+
   .titleTop {
     font-size: 68px;
   }
@@ -326,12 +367,8 @@
 }
 
 @media (max-width: 1360px) {
-  .container {
-    padding: 0 2rem;
-  }
-
   .titleTop {
-    font-size: 64px;
+    font-size: 58px;
   }
 
   .titleMid {
@@ -339,11 +376,11 @@
   }
 
   .titleBotTop {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .redText {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .titleBotMid {
@@ -351,15 +388,15 @@
   }
 
   .bottomTitleSpan {
-    font-size: 36px;
+    font-size: 33px;
   }
 
   .titleBotBot {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .bottomTitleSpanTwo {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .button {
@@ -370,7 +407,7 @@
 
 @media (max-width: 1190px) {
   .titleTop {
-    font-size: 54px;
+    font-size: 50px;
   }
 
   .titleMid {
@@ -379,11 +416,11 @@
   }
 
   .titleBotTop {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .redText {
-    font-size: 26px;
+    font-size: 24px;
   }
 
   .titleBotMid {
@@ -391,15 +428,15 @@
   }
 
   .bottomTitleSpan {
-    font-size: 29px;
+    font-size: 28px;
   }
 
   .titleBotBot {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .bottomTitleSpanTwo {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .button {
@@ -414,7 +451,7 @@
   }
 
   .titleTop {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   .titleMid {
@@ -423,15 +460,16 @@
   }
 
   .titleBotTop {
-    font-size: 22px;
+    text-align: center;
+    font-size: 28px;
   }
 
   .redText {
-    font-size: 23px;
+    font-size: 34px;
   }
 
   .titleBotMid {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .bottomTitleSpan {
@@ -439,11 +477,11 @@
   }
 
   .titleBotBot {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .bottomTitleSpanTwo {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .button {

@@ -1,6 +1,7 @@
 .container {
   overflow: hidden;
   background-color: #dae3eb;
+  font-family: "Oxanium", cursive;
 }
 
 .top {
@@ -163,6 +164,7 @@
   text-transform: uppercase;
   font-size: 14px;
   cursor: pointer;
+  font-family: "Oxanium", cursive;
 }
 
 .sendButton:hover {
@@ -170,6 +172,7 @@
 }
 
 .alert {
+  font-family: "Oxanium", cursive;
   position: absolute;
   bottom: -2rem;
 }

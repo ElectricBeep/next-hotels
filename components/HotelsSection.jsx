@@ -79,7 +79,7 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
                 <motion.div
                   className={styles.pill}
                   key={feature.id}
-                  variants={direction === 'left' ? slideIn("right", "spring", i * 0.2, 2.5) : slideIn("left", "spring", i * 0.2, 2.5)}
+                  variants={direction === 'left' ? slideIn("right", "spring", i * 0.2, 3) : slideIn("left", "spring", i * 0.2, 3)}
                 >
                   {feature.feature}
                   {feature.icon}

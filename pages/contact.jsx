@@ -144,7 +144,7 @@ const Contact = () => {
                     variants={slideIn("left", "spring", 0.75, 3)}
                   >
                     <FaMapMarkerAlt className={styles.icon} />
-                    <span>Some Random Address</span>
+                    <span>Radiceva 15, 71000 Sarajevo</span>
                   </motion.div>
                 </div>
               </div>

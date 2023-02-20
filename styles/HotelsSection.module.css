@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: "Oxanium", cursive;
 }
 
 .wrapperLeft {
@@ -85,6 +86,7 @@
   color: rgb(60, 60, 60);
   border-radius: 3px;
   transition: all 0.3s ease;
+  font-family: "Oxanium", cursive;
 }
 
 .readMoreButton:hover {
@@ -135,6 +137,7 @@
   cursor: pointer;
   font-size: 17px;
   transition: 0.3s all ease;
+  font-family: "Oxanium", cursive;
 }
 
 .button:hover {

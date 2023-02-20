@@ -2,6 +2,7 @@
   background-color: #1f2024;
   display: flex;
   flex-direction: column;
+  font-family: "Oxanium", cursive;
 }
 
 .topSection {
@@ -39,6 +40,7 @@
   cursor: pointer;
   overflow: hidden;
   font-weight: bold;
+  font-family: "Oxanium", cursive;
 }
 
 .topSectionAnchor span {
@@ -82,7 +84,7 @@
 
 .left h2 {
   color: white;
-  font-family: "Courgette", cursive;
+  font-family: "Oxanium", cursive;
   font-size: 30px;
   letter-spacing: 2px;
 }

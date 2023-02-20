@@ -41,7 +41,7 @@ const Footer = ({ t }) => {
                     <BsFillEnvelopeFill /><span>hotel.cosmopolit.sa@gmail.com</span>
                   </div>
                   <div className={styles.footerListItem}>
-                    <MdLocationOn /><span>Some Random Address, Sarajevo</span>
+                    <MdLocationOn /><span>Radiceva 15, 71000 Sarajevo</span>
                   </div>
                 </div>
               </div>
