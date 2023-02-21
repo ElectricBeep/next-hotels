@@ -33,7 +33,7 @@
   line-height: 0;
   color: #1e3d58;
   font-weight: lighter;
-  font-size: 88px;
+  font-size: 86px;
   font-family: "Oxanium", cursive;
 }
 
@@ -261,12 +261,12 @@
 
 @media (max-width: 1840px) {
   .titleTop {
-    font-size: 82px;
+    font-size: 78px;
     line-height: 0.5;
   }
 
   .titleBotTop {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .redText {
@@ -330,7 +330,7 @@
   }
 
   .titleTop {
-    font-size: 68px;
+    font-size: 64px;
   }
 
   .titleMid {
@@ -338,7 +338,7 @@
   }
 
   .titleBotTop {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .redText {
@@ -368,7 +368,7 @@
 
 @media (max-width: 1360px) {
   .titleTop {
-    font-size: 58px;
+    font-size: 56px;
   }
 
   .titleMid {
@@ -376,11 +376,11 @@
   }
 
   .titleBotTop {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .redText {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .titleBotMid {
@@ -407,7 +407,7 @@
 
 @media (max-width: 1190px) {
   .titleTop {
-    font-size: 50px;
+    font-size: 48px;
   }
 
   .titleMid {
@@ -416,11 +416,11 @@
   }
 
   .titleBotTop {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .redText {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .titleBotMid {
