@@ -38,6 +38,9 @@ const Navbar = ({ t }) => {
                 <Link href="/hotel/hotel-hecco-deluxe">
                   Hecco Deluxe
                 </Link>
+                <Link href="/hotel/hotel-hecco">
+                  Hotel Hecco
+                </Link>
               </div>
             )}
           </div>
@@ -87,6 +90,10 @@ const Navbar = ({ t }) => {
                 <hr />
                 <Link href="/hotel/hotel-hecco-deluxe" onClick={() => setIsActive(false)}>
                   Hecco Deluxe
+                </Link>
+                <hr />
+                <Link href="/hotel/hotel-hecco" onClick={() => setIsActive(false)}>
+                  Hotel Hecco
                 </Link>
                 <hr />
                 <Link onClick={() => setIsActive(false)} href="/contact">

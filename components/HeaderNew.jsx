@@ -75,8 +75,12 @@ const HeaderNew = ({ title, t }) => {
               href="#hotels"
               className={styles.button}
               variants={slideIn("left", "spring", 1.2, 1.8)}
+              onClick={() => {
+                const hotelsSection = document.getElementById("hotels");
+                hotelsSection.scrollIntoView({ behavior: "smooth" });
+              }}
             >
-              {t("headerButton")}
+              {t("headerButtonScoll")}
             </motion.a>
           </div>
         </motion.div>

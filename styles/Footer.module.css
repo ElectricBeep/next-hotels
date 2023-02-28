@@ -132,7 +132,8 @@
   cursor: pointer;
 }
 
-.icon:hover {
+.icon:hover,
+.footerListItem a:hover {
   color: #1e3d58;
 }
 

@@ -1,6 +1,6 @@
 import { AiOutlineWifi } from "react-icons/ai";
-import { MdBalcony, MdPets, MdSmokeFree, MdFamilyRestroom, MdRoomService, MdBreakfastDining, MdElevator, MdAirportShuttle } from "react-icons/md";
-import { FaParking, FaUserTie } from "react-icons/fa";
+import { MdSmokeFree, MdFamilyRestroom, MdRoomService, MdBreakfastDining, MdElevator, MdAirportShuttle } from "react-icons/md";
+import { FaUserTie } from "react-icons/fa";
 import { GiTheater } from "react-icons/gi";
 import { BiDrink } from "react-icons/bi";
 

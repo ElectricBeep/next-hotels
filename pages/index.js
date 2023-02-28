@@ -9,6 +9,7 @@ import { hotelTwoFeatures } from '@/hotelTwoFeatures'
 import Attractions from '@/components/Attractions'
 import Testimonials from '@/components/Testimonials'
 import HeaderNew from '@/components/HeaderNew'
+import { hotelThreeFeatures } from '@/hotelThreeFeatures'
 
 export async function getStaticProps({ locale }) {
   return {
@@ -40,7 +41,7 @@ export default function Home() {
           hotelTitle={"Hotel Cosmopolit"}
           hotelDesc={t("cosmopolitDesc")}
           linkOne={"hotel-cosmopolit"}
-          linkTwo={"https://www.booking.com/hotel/ba/cosmopolit.hr.html"}
+          linkTwo={"/contact"}
         />
         <HotelsSection
           t={t}
@@ -51,7 +52,18 @@ export default function Home() {
           hotelTitle={"Hotel Hecco Deluxe"}
           hotelDesc={t("deluxeDesc")}
           linkOne={"hotel-hecco-deluxe"}
-          linkTwo={"https://www.booking.com/hotel/ba/hecco-deluxe.en-gb.html?aid=356980&label=gog235jc-1DCAsoEkIMaGVjY28tZGVsdXhlSDNYA2gSiAEBmAEJuAEXyAEM2AED6AEBiAIBqAIDuAKg9PieBsACAdICJDZmN2Y4NzQ2LTZmNmEtNDZlZS1iYTk3LThlMGUyYjI4ODg4NNgCBOACAQ&sid=1ebcd1c25d8b009ffb9395189be3b58b&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&"}
+          linkTwo={"/contact"}
+        />
+        <HotelsSection
+          t={t}
+          direction={"leftTwo"}
+          features={hotelThreeFeatures}
+          imgOne={"featured6.jpg"}
+          imgTwo={"heco1.jpg"}
+          hotelTitle={"Hotel Hecco"}
+          hotelDesc={t("hecoDesc")}
+          linkOne={"hotel-hecco"}
+          linkTwo={"/contact"}
         />
         <Attractions t={t} />
         <Testimonials t={t} />

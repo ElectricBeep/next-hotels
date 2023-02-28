@@ -92,7 +92,7 @@ const HotelHeccoDeluxe = () => {
                       <FaMapMarkerAlt /> Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
-                  <Link href="https://www.booking.com/hotel/ba/hecco-deluxe.en-gb.html?aid=356980&label=gog235jc-1DCAsoEkIMaGVjY28tZGVsdXhlSDNYA2gSiAEBmAEJuAEXyAEM2AED6AEBiAIBqAIDuAKg9PieBsACAdICJDZmN2Y4NzQ2LTZmNmEtNDZlZS1iYTk3LThlMGUyYjI4ODg4NNgCBOACAQ&sid=1ebcd1c25d8b009ffb9395189be3b58b&dist=0&group_adults=2&group_children=0&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&" target="_blank" className={styles.leftTopButton}>
+                  <Link href="/contact" className={styles.leftTopButton}>
                     <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
                       {t("cosmoBook")}
                     </motion.span>

@@ -4,17 +4,44 @@ import { BsFillTelephoneFill, BsFillEnvelopeFill, BsWhatsapp } from "react-icons
 import { AiFillFacebook } from "react-icons/ai";
 import { MdLocationOn } from "react-icons/md";
 import { FaInstagramSquare, FaViber } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 import styles from "../styles/Footer.module.css";
 
 const Footer = ({ t }) => {
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    const hotelsElement = document.getElementById("hotels");
+
+    if (hotelsElement) {
+      hotelsElement.scrollIntoView({
+        behavior: "smooth"
+      });
+    } else {
+      router.push("/").then(() => {
+        setTimeout(() => {
+          const hotelsElement = document.getElementById("hotels");
+          hotelsElement?.scrollIntoView({
+            behavior: "smooth"
+          });
+        }, 100);
+      });
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.topSection}>
         <h1>{t("footerTitle")}</h1>
-        <Link className={styles.topSectionAnchor} href="#hotels">
-          <span>{t("headerButton")}</span>
-        </Link>
+        <a
+          className={styles.topSectionAnchor}
+          href="#hotels"
+          onClick={handleClick}
+        >
+          <span>{t("headerButtonScoll")}</span>
+        </a>
       </div>
       <div className={styles.wrapperContainer}>
         <div className={styles.wrapper}>
@@ -38,7 +65,7 @@ const Footer = ({ t }) => {
                 </div>
                 <div className={styles.footerItemList}>
                   <div className={styles.footerListItem}>
-                    <BsFillEnvelopeFill /><span>hotel.cosmopolit.sa@gmail.com</span>
+                    <BsFillEnvelopeFill /><a href="mailto:hotel.cosmopolit.sa@gmail.com" target="_blank">hotel.cosmopolit.sa@gmail.com</a>
                   </div>
                   <div className={styles.footerListItem}>
                     <MdLocationOn /><span>Radiceva 15, 71000 Sarajevo</span>

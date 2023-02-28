@@ -45,6 +45,12 @@ const Testimonials = ({ t }) => {
           >
             Hecco Deluxe
           </span>
+          <span
+            onClick={() => setActive("hecco")}
+            className={active === "hecco" ? styles.activeSpan : styles.span}
+          >
+            Hotel Hecco
+          </span>
         </motion.div>
         <motion.div
           className={styles.cardContainer}
@@ -102,56 +108,109 @@ const Testimonials = ({ t }) => {
               </div>
             </>
           ) : (
-            <>
-              <div className={styles.card}>
-                <div>
-                  <h2>Izuzetan</h2>
-                  <div className={styles.cardTop}>
-                    <ImQuotesRight className={styles.cardIcon} />
-                    <div className={styles.ratingContainer}>10.0</div>
+            active === "deluxe" ? (
+              <>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Izuzetan</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>10.0</div>
+                    </div>
+                    <p>
+                      Prelijepo divna soba s pogledom na najljepsi grad, divno osoblje, cisto. Sve je za 10+
+                    </p>
                   </div>
-                  <p>
-                    Prelijepo divna soba s pogledom na najljepsi grad, divno osoblje, cisto. Sve je za 10+
-                  </p>
-                </div>
-                <div>
-                  <hr className={styles.hr} />
-                  <span>Merima • Sweden</span>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div>
-                  <h2>Excellent</h2>
-                  <div className={styles.cardTop}>
-                    <ImQuotesRight className={styles.cardIcon} />
-                    <div className={styles.ratingContainer}>8.0</div>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Merima • Sweden</span>
                   </div>
-                  <p>
-                    The room was clean and had a great view of the city and had blackout blinds which was great as during the day the room was very light. Reception was very helpful and location was perfect.
-                  </p>
                 </div>
-                <div>
-                  <hr className={styles.hr} />
-                  <span>Ali • United Kingdom</span>
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div>
-                  <h2>Very Good</h2>
-                  <div className={styles.cardTop}>
-                    <ImQuotesRight className={styles.cardIcon} />
-                    <div className={styles.ratingContainer}>9.0</div>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Excellent</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>8.0</div>
+                    </div>
+                    <p>
+                      The room was clean and had a great view of the city and had blackout blinds which was great as during the day the room was very light. Reception was very helpful and location was perfect.
+                    </p>
                   </div>
-                  <p>
-                    Very close to baščaršija. İncredible view of sarajevo. Nice helpful staff.
-                  </p>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Ali • United Kingdom</span>
+                  </div>
                 </div>
-                <div>
-                  <hr className={styles.hr} />
-                  <span>Mehmet • Turkey</span>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Very Good</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>9.0</div>
+                    </div>
+                    <p>
+                      Very close to baščaršija. İncredible view of sarajevo. Nice helpful staff.
+                    </p>
+                  </div>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Mehmet • Turkey</span>
+                  </div>
                 </div>
-              </div>
-            </>
+              </>
+            ) : (
+              <>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Exceptional</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>10.0</div>
+                    </div>
+                    <p>
+                      Clean, cozy room and really friendly people. Just a 10 minutes walk from the old town... One can be sure - I will go back there again.
+                    </p>
+                  </div>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Svetoslav • Germany</span>
+                  </div>
+                </div>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Superb</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>9.0</div>
+                    </div>
+                    <p>
+                      The staff was great, very accommodating. The room was big and clean, very comfortable.
+                    </p>
+                  </div>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Palumbo • Italy</span>
+                  </div>
+                </div>
+                <div className={styles.card}>
+                  <div>
+                    <h2>Good value for money!</h2>
+                    <div className={styles.cardTop}>
+                      <ImQuotesRight className={styles.cardIcon} />
+                      <div className={styles.ratingContainer}>8.0</div>
+                    </div>
+                    <p>
+                      We booked very last minute and were still able to get a garage parking space for free. For the price the room was absolutely okay.
+                    </p>
+                  </div>
+                  <div>
+                    <hr className={styles.hr} />
+                    <span>Patricia • Austria</span>
+                  </div>
+                </div>
+              </>
+            )
           )}
         </motion.div>
       </motion.div>

@@ -7,9 +7,8 @@ import styles from "../styles/HotelsSection.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
 const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelDesc, linkOne, linkTwo }) => {
-
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="hotels">
       {direction === "left" && (
         <motion.h1
           className={styles.heading} id="hotels"
@@ -23,7 +22,7 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
           </motion.span>
         </motion.h1>
       )}
-      <div className={direction === 'left' ? styles.wrapperLeft : styles.wrapperRight}>
+      <div className={direction === 'left' || direction === 'leftTwo' ? styles.wrapperLeft : styles.wrapperRight}>
         <motion.div
           className={styles.left}
           variants={staggerContainer}
@@ -32,13 +31,13 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
           viewport={{ once: true, amoung: 0.45 }}
         >
           <motion.img
-            variants={direction === 'left' ? slideIn("left", "spring", 0.4, 1) : slideIn("right", "spring", 0.4, 1)}
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.4, 1) : slideIn("right", "spring", 0.4, 1)}
             src={`/img/featured/${imgOne}`}
             alt="hotels sarajevo"
             className={styles.firstImage}
           />
           <motion.img
-            variants={direction === 'left' ? slideIn("left", "spring", 0.45, 1) : slideIn("right", "spring", 0.45, 1)}
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.45, 1) : slideIn("right", "spring", 0.45, 1)}
             src={`/img/featured/${imgTwo}`}
             alt="hotels sarajevo"
             className={styles.secondImage}
@@ -55,20 +54,20 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             <hr className={styles.hr} />
             <motion.h1
               className={styles.rightTitle}
-              variants={direction === 'left' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
             >
               {hotelTitle}
             </motion.h1>
             <motion.p
               className={styles.rightText}
-              variants={direction === 'left' ? slideIn("right", "spring", 0.45, 2) : slideIn("left", "spring", 0.45, 2)}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.45, 2) : slideIn("left", "spring", 0.45, 2)}
             >
               {hotelDesc}
             </motion.p>
             <Link href={`/hotel/${linkOne}`}>
               <motion.button
                 className={styles.readMoreButton}
-                variants={direction === 'left' ? slideIn("right", "spring", 0.5, 2) : slideIn("left", "spring", 0.5, 2)}
+                variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.5, 2) : slideIn("left", "spring", 0.5, 2)}
               >
                 {t("hotelsSectionButton")}
                 <FaArrowRight className={styles.leftBottomIcon} />
@@ -79,17 +78,17 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
                 <motion.div
                   className={styles.pill}
                   key={feature.id}
-                  variants={direction === 'left' ? slideIn("right", "spring", i * 0.2, 3) : slideIn("left", "spring", i * 0.2, 3)}
+                  variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", i * 0.2, 3) : slideIn("left", "spring", i * 0.2, 3)}
                 >
                   {feature.feature}
                   {feature.icon}
                 </motion.div>
               ))}
             </div>
-            <Link href={linkTwo} target="_blank">
+            <Link href={linkTwo}>
               <motion.button
                 className={styles.button}
-                variants={direction === 'left' ? slideIn("right", "spring", 0.8, 2) : slideIn("left", "spring", 0.8, 2)}
+                variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.8, 2) : slideIn("left", "spring", 0.8, 2)}
               >
                 {t("headerButton")}
               </motion.button>

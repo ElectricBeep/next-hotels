@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import Link from "next/link";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { BsArrowDownCircle } from "react-icons/bs";
@@ -7,8 +7,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
 import Gallery from "../../components/Gallery";
-import { hotelOneFeatures } from "../../hotelOneFeatures";
 import styles from "../../styles/HotelCosmopolit.module.css";
+import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";
 
@@ -20,49 +20,53 @@ export async function getStaticProps({ locale }) {
   }
 }
 
-const HotelCosmopolit = () => {
+const HotelHecco = () => {
   const { t } = useTranslation("common");
 
   const photos = [
     {
       id: 1,
-      img: "cosmopolit/cosmopolit11.jpg"
+      img: "hecco/hecco3.jpg"
     },
     {
       id: 2,
-      img: "cosmopolit/cosmopolit12.JPG"
+      img: "hecco/hecco4.jpg"
     },
     {
       id: 3,
-      img: "cosmopolit/cosmopolit13.JPG"
+      img: "hecco/hecco5.jpg"
     },
     {
       id: 4,
-      img: "cosmopolit/cosmopolit4.jpg"
+      img: "hecco/hecco6.JPG"
     },
     {
       id: 5,
-      img: "cosmopolit/cosmopolit5.jpg"
+      img: "hecco/hecco7.JPG"
     },
     {
       id: 6,
-      img: "cosmopolit/cosmopolit6.jpg"
+      img: "hecco/hecco8.JPG"
     },
     {
       id: 7,
-      img: "cosmopolit/cosmopolit7.jpg"
+      img: "hecco/hecco9.jpg"
     },
     {
       id: 8,
-      img: "cosmopolit/cosmopolit18.JPG"
+      img: "hecco/hecco10.jpg"
+    },
+    {
+      id: 8,
+      img: "hecco/hecco11.jpg"
     },
   ];
 
   return (
     <>
       <Head>
-        <title>Hotel Cosmopolit Sarajevo</title>
-        <meta name="description" content="Hotel Cosmopolit Sarajevo" />
+        <title>Hotel Hecco Sarajevo</title>
+        <meta name="description" content="Hotel Hecco Sarajevo" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
       </Head>
@@ -83,13 +87,13 @@ const HotelCosmopolit = () => {
                       className={styles.leftTopTitle}
                       variants={slideIn("up", "spring", 0.3, 1)}
                     >
-                      Hotel Cosmopolit
+                      Hotel Hecco
                     </motion.h1>
                     <motion.span
                       className={styles.leftTopSpan}
                       variants={slideIn("up", "spring", 0.4, 1)}
                     >
-                      <FaMapMarkerAlt /> Radiceva 15, 71000 Sarajevo, Bosna i Hercegovina
+                      <FaMapMarkerAlt /> Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
                   <Link href="/contact" className={styles.leftTopButton}>
@@ -106,7 +110,7 @@ const HotelCosmopolit = () => {
                     whileInView="show"
                     viewport={{ once: true, amoung: 0.25 }}
                   >
-                    {hotelOneFeatures.map((feature, i) => (
+                    {hotelTwoFeatures.map((feature, i) => (
                       <motion.div
                         className={styles.pill}
                         key={feature.id}
@@ -125,13 +129,13 @@ const HotelCosmopolit = () => {
                     viewport={{ once: true, amoung: 0.25 }}
                   >
                     <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
-                      <b>{t("cosmopolitDesc")}</b>
+                      <b>{t("hecoDesc")}</b>
                     </motion.p>
                     <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
-                      {t("cosmoDescTwo")}
+                      {t("hecoDescTwo")}
                     </motion.p>
                     <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
-                      {t("cosmoDescThree")}
+                      {t("hecoDescThree")}
                     </motion.p>
                   </motion.div>
                 </div>
@@ -147,8 +151,8 @@ const HotelCosmopolit = () => {
             >
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
-                src="/img/featured/featured7.jpg"
-                alt="hotel cosmopolit"
+                src="/img/featured/heco2.jpg"
+                alt="hotel hecco deluxe"
                 className={styles.rightImg}
               />
             </motion.div>
@@ -160,4 +164,4 @@ const HotelCosmopolit = () => {
   )
 }
 
-export default HotelCosmopolit
+export default HotelHecco
