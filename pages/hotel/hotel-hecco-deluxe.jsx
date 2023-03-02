@@ -42,7 +42,7 @@ const HotelHeccoDeluxe = () => {
     },
     {
       id: 5,
-      img: "deluxe/deluxe7.JPG"
+      img: "deluxe/deluxe7.jpg"
     },
     {
       id: 6,

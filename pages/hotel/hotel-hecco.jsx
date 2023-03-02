@@ -38,15 +38,15 @@ const HotelHecco = () => {
     },
     {
       id: 4,
-      img: "hecco/hecco6.JPG"
+      img: "hecco/hecco6.jpg"
     },
     {
       id: 5,
-      img: "hecco/hecco7.JPG"
+      img: "hecco/hecco7.jpg"
     },
     {
       id: 6,
-      img: "hecco/hecco8.JPG"
+      img: "hecco/hecco8.jpg"
     },
     {
       id: 7,
