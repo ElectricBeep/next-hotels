@@ -123,7 +123,7 @@ const HeaderNew = ({ title, t }) => {
             {featuredPhotos.map((img, index) => (
               <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
                 {index === current && (
-                  <img src={`/img/${img.img}`} className={styles.img} />
+                  <img src={`/img/${img.img}`} alt="header" className={styles.img} />
                 )}
               </div>
             ))}

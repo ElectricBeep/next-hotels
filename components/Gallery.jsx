@@ -55,7 +55,7 @@ const Gallery = ({ photos, t }) => {
           {photos.map((img, index) => (
             <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
               {index === current && (
-                <img src={`/img/${img.img}`} data-src={`/img/${img.img}.jpg`} alt={img.title} className={styles.img} />
+                <img src={`/img/${img.img}`} alt={img.title} className={styles.img} />
               )}
             </div>
           ))}
@@ -65,7 +65,7 @@ const Gallery = ({ photos, t }) => {
         </motion.div>
         <div className={styles.smallImgContainer}>
           {photos.map((img, index) => (
-            <img src={`/img/${img.img}`} key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeSmallImg : styles.smallImg} />
+            <img src={`/img/${img.img}`} alt="small" key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeSmallImg : styles.smallImg} />
           ))}
         </div>
       </motion.div>
