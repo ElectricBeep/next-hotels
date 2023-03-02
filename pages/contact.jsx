@@ -137,7 +137,7 @@ const Contact = () => {
                     variants={slideIn("left", "spring", 0.7, 3)}
                   >
                     <BsEnvelopeFill className={styles.icon} />
-                    <span>hotel.cosmopolit.sa@gmail.com</span>
+                    <a href="mailto:hotel.cosmopolit.sa@gmail.com" target="_blank">hotel.cosmopolit.sa@gmail.com</a>
                   </motion.div>
                   <motion.div
                     className={styles.addressCard}
@@ -159,7 +159,7 @@ const Contact = () => {
                   <Link href="https://www.facebook.com/hotelcosmopolit.sarajevo/" target="_blank" rel="noreferrer">
                     <AiFillFacebook className={styles.socialIcon} />
                   </Link>
-                  <Link href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+                  <Link href="https://www.instagram.com/hotel.cosmopolit/?hl=en" target="_blank" rel="noreferrer">
                     <FaInstagramSquare className={styles.socialIcon} />
                   </Link>
                 </div>

@@ -56,6 +56,10 @@ const HotelCosmopolit = () => {
       id: 8,
       img: "cosmopolit/cosmopolit18.JPG"
     },
+    {
+      id: 9,
+      img: "cosmopolit/cosmopolit19.JPG"
+    },
   ];
 
   return (
