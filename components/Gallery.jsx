@@ -55,7 +55,7 @@ const Gallery = ({ photos, t }) => {
           {photos.map((img, index) => (
             <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
               {index === current && (
-                <img src={`/img/${img.img}`} data-src={`/img/${img.img}.jpg`} alt={img.title} className={styles.img} loading="lazy" />
+                <img src={`/img/${img.img}`} data-src={`/img/${img.img}.jpg`} alt={img.title} className={styles.img} />
               )}
             </div>
           ))}
