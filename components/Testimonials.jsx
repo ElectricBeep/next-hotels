@@ -43,7 +43,7 @@ const Testimonials = ({ t }) => {
             onClick={() => setActive("deluxe")}
             className={active === "deluxe" ? styles.activeSpan : styles.span}
           >
-            Hecco Deluxe
+            City View Deluxe
           </span>
           <span
             onClick={() => setActive("hecco")}

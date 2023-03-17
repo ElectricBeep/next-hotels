@@ -69,8 +69,8 @@ const HotelHeccoDeluxe = () => {
   return (
     <>
       <Head>
-        <title>Hotel Hecco Deluxe Sarajevo</title>
-        <meta name="description" content="Hotel Hecco Deluxe Sarajevo" />
+        <title>Hotel City View Deluxe Sarajevo</title>
+        <meta name="description" content="Hotel City View Deluxe Sarajevo" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
       </Head>
@@ -91,7 +91,7 @@ const HotelHeccoDeluxe = () => {
                       className={styles.leftTopTitle}
                       variants={slideIn("up", "spring", 0.3, 1)}
                     >
-                      Hotel Hecco Deluxe
+                      Hotel City View Deluxe
                     </motion.h1>
                     <motion.span
                       className={styles.leftTopSpan}
@@ -156,7 +156,7 @@ const HotelHeccoDeluxe = () => {
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
                 src="/img/featured/featured2.jpg"
-                alt="hotel hecco deluxe"
+                alt="hotel City View deluxe"
                 className={styles.rightImg}
               />
             </motion.div>

@@ -93,7 +93,7 @@ const HotelCosmopolit = () => {
                       className={styles.leftTopSpan}
                       variants={slideIn("up", "spring", 0.4, 1)}
                     >
-                      <FaMapMarkerAlt /> Radiceva 15, 71000 Sarajevo, Bosna i Hercegovina
+                      <FaMapMarkerAlt /> Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
                   <Link href="/contact" className={styles.leftTopButton}>

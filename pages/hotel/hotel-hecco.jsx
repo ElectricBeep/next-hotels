@@ -152,7 +152,7 @@ const HotelHecco = () => {
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
                 src="/img/featured/heco2.jpg"
-                alt="hotel hecco deluxe"
+                alt="hotel hecco"
                 className={styles.rightImg}
               />
             </motion.div>

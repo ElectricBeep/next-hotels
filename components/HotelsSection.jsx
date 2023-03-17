@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 import styles from "../styles/HotelsSection.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
 
-const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelDesc, linkOne, linkTwo }) => {
+const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelAddress, hotelDesc, linkOne, linkTwo }) => {
   return (
     <div className={styles.container} id="hotels">
       {direction === "left" && (
@@ -58,6 +58,12 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             >
               {hotelTitle}
             </motion.h1>
+            <motion.p
+              className={styles.rightAddress}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.43, 1)}
+            >
+              <FaMapMarkerAlt /><span>{hotelAddress}</span>
+            </motion.p>
             <motion.p
               className={styles.rightText}
               variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.45, 2) : slideIn("left", "spring", 0.45, 2)}

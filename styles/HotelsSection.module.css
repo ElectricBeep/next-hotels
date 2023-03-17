@@ -66,6 +66,17 @@
 
 .rightTitle {
   font-size: 56px;
+  margin-bottom: 0;
+}
+
+.rightAddress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #1e3d58;
+  margin-bottom: 30px;
 }
 
 .rightText {
@@ -183,13 +194,13 @@
 
   .firstImage {
     height: 80%;
-    width: 84%;
+    width: 88%;
     left: -50px;
   }
 
   .secondImage {
     height: 70%;
-    width: 72%;
+    width: 78%;
     right: -50px;
   }
 

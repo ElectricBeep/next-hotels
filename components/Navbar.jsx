@@ -36,7 +36,7 @@ const Navbar = ({ t }) => {
                   Cosmopolit
                 </Link>
                 <Link href="/hotel/hotel-hecco-deluxe">
-                  Hecco Deluxe
+                  City View Deluxe
                 </Link>
                 <Link href="/hotel/hotel-hecco">
                   Hotel Hecco
@@ -89,7 +89,7 @@ const Navbar = ({ t }) => {
                 </Link>
                 <hr />
                 <Link href="/hotel/hotel-hecco-deluxe" onClick={() => setIsActive(false)}>
-                  Hecco Deluxe
+                  City View Deluxe
                 </Link>
                 <hr />
                 <Link href="/hotel/hotel-hecco" onClick={() => setIsActive(false)}>
