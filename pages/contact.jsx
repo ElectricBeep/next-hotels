@@ -47,12 +47,16 @@ const Contact = () => {
         "_iGvRwWb7k8Vv93OH"
       )
       .then((result) => {
-        console.log(result.text);
         setIsSending(false);
         setDone(true);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setText("");
         setTimeout(() => {
           setDone(false);
         }, 4000);
+
       }, (error) => {
         setError(true);
         setIsSending(false);
