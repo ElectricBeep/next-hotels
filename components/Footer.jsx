@@ -57,15 +57,15 @@ const Footer = ({ t }) => {
                     <BsFillTelephoneFill /><span>+387 33 251 100</span>
                   </div>
                   <div className={styles.footerListItem}>
-                    <FaViber /><span>+387 33 251 100</span>
+                    <FaViber /><span>+387 62 257 471</span>
                   </div>
                   <div className={styles.footerListItem}>
-                    <BsWhatsapp /><span>+387 33 251 100</span>
+                    <BsWhatsapp /><span>+387 62 257 471</span>
                   </div>
                 </div>
                 <div className={styles.footerItemList}>
                   <div className={styles.footerListItem}>
-                    <BsFillEnvelopeFill /><a href="mailto:hotel.cosmopolit.sa@gmail.com" target="_blank">hotel.cosmopolit.sa@gmail.com</a>
+                    <BsFillEnvelopeFill /><a href="mailto:Hotel.hecco@gmail.com" target="_blank">Hotel.hecco@gmail.com</a>
                   </div>
                   <div className={styles.footerListItem}>
                     <MdLocationOn /><span>Radiceva 15, 71000 Sarajevo</span>

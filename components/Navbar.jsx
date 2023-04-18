@@ -57,7 +57,7 @@ const Navbar = ({ t }) => {
               <span>
                 {router.locale === "en"
                   ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} className={styles.selectContainerImage} />
-                  : <Image src="/img/bih.png" alt="bih flag" width={30} height={30} className={styles.selectContainerImage} />}
+                  : <Image src="/img/bihFlag.png" alt="bih flag" width={30} height={30} className={styles.selectContainerImage} />}
               </span>
               {showLanguageContainer && (
                 <div className={styles.select}>
@@ -65,7 +65,7 @@ const Navbar = ({ t }) => {
                     <Link href={router.asPath} key={l} locale={l} className={styles.selectItem} onClick={() => setShowLanguageContainer(false)}>
                       {l === "en"
                         ? <Image src="/img/usa.png" alt="usa flag" width={30} height={30} />
-                        : <Image src="/img/bih.png" alt="bosnia flag" width={30} height={30} />}
+                        : <Image src="/img/bihFlag.png" alt="bosnia flag" width={30} height={30} />}
                     </Link>
                   ))}
                 </div>

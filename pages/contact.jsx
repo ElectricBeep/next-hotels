@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
-import { FaMapMarkerAlt } from "react-icons/fa";
 import { AiFillFacebook, AiFillPhone } from "react-icons/ai";
 import { BsEnvelopeFill, BsWhatsapp } from "react-icons/bs";
 import { FaInstagramSquare } from "react-icons/fa";
@@ -41,10 +40,10 @@ const Contact = () => {
     };
     setIsSending(true);
     emailjs.sendForm
-      ("service_64qv3ms",
-        "template_i7p9sij",
+      ("service_2k7e39c",
+        "template_b8lsnn6",
         formRef.current,
-        "_iGvRwWb7k8Vv93OH"
+        "SIgmEvjNXnDRUnbcf"
       )
       .then((result) => {
         setIsSending(false);
@@ -141,14 +140,14 @@ const Contact = () => {
                     variants={slideIn("left", "spring", 0.7, 3)}
                   >
                     <BsEnvelopeFill className={styles.icon} />
-                    <a href="mailto:hotel.cosmopolit.sa@gmail.com" target="_blank">hotel.cosmopolit.sa@gmail.com</a>
+                    <a href="mailto:Hotel.hecco@gmail.com" target="_blank">Hotel.hecco@gmail.com</a>
                   </motion.div>
                   <motion.div
                     className={styles.addressCard}
-                    variants={slideIn("left", "spring", 0.75, 3)}
+                    variants={slideIn("left", "spring", 0.7, 3)}
                   >
-                    <FaMapMarkerAlt className={styles.icon} />
-                    <span>Radiceva 15, 71000 Sarajevo</span>
+                    <BsEnvelopeFill className={styles.icon} />
+                    <a href="mailto:hotel.cosmopolit.sa@gmail.com" target="_blank">hotel.cosmopolit.sa@gmail.com</a>
                   </motion.div>
                 </div>
               </div>
