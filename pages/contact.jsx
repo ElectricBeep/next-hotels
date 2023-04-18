@@ -194,7 +194,7 @@ const Contact = () => {
                 />
                 <motion.input
                   variants={slideIn("right", "spring", 0.6, 3)}
-                  type="text"
+                  type="email"
                   name="user_email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
