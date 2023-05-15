@@ -107,12 +107,12 @@ const Contact = () => {
               viewport={{ once: true, amoung: 0.25 }}
             >
               <div>
-                <motion.h1
+                <motion.h2
                   className={styles.botHeading}
                   variants={slideIn("up", "spring", 0.5, 1)}
                 >
                   {t("contactOurContacts")}
-                </motion.h1>
+                </motion.h2>
                 <div className={styles.botLeftAddressContainer}>
                   <motion.div
                     className={styles.addressCard}
@@ -155,9 +155,9 @@ const Contact = () => {
                 className={styles.socialContainer}
                 variants={slideIn("left", "spring", 0.8, 3)}
               >
-                <h1 className={styles.botHeading}>
+                <h2 className={styles.botHeading}>
                   {t("contactOurSocial")}
-                </h1>
+                </h2>
                 <div className={styles.socialIconsContainer}>
                   <Link href="https://www.facebook.com/hotelcosmopolit.sarajevo/" target="_blank" rel="noreferrer">
                     <AiFillFacebook className={styles.socialIcon} />
@@ -175,12 +175,12 @@ const Contact = () => {
               whileInView="show"
               viewport={{ once: true, amoung: 0.25 }}
             >
-              <motion.h1
+              <motion.h2
                 className={styles.botHeading}
                 variants={slideIn("up", "spring", 0.5, 1)}
               >
                 {t("contactRightTitle")}
-              </motion.h1>
+              </motion.h2>
               <form ref={formRef} className={styles.form} onSubmit={handleSubmit}>
                 <motion.input
                   variants={slideIn("right", "spring", 0.55, 3)}

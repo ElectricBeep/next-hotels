@@ -52,12 +52,12 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             viewport={{ once: true, amoung: 0.45 }}
           >
             <hr className={styles.hr} />
-            <motion.h1
+            <motion.h2
               className={styles.rightTitle}
               variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
             >
               {hotelTitle}
-            </motion.h1>
+            </motion.h2>
             <motion.p
               className={styles.rightAddress}
               variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.43, 1)}

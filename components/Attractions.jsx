@@ -29,12 +29,12 @@ const Attractions = ({ t }) => {
             whileInView="show"
             viewport={{ once: true, amoung: 0.45 }}
           >
-            <motion.h1
+            <motion.h2
               className={styles.title}
               variants={slideIn("left", "spring", 0.4, 1)}
             >
               {t("attractionsDescTitle")}
-            </motion.h1>
+            </motion.h2>
             <motion.h2 variants={slideIn("left", "spring", 0.5, 1)}>
               <span className={styles.subtitleFirstWord}>{t("attractionsTextFirst")}</span>, <span className={styles.subtitle}>{t("attractionsTextSecond")}</span>
             </motion.h2>
