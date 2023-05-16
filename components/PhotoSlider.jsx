@@ -101,11 +101,8 @@ const PhotoSlider = (props) => {
                 <img src={`/img/attractions/${slide.img}`} alt={slide.title} className={styles.image} fill="true" />
               </Link>
             </div>
-            <h2 className={styles.sliderCardTitle}>{slide.title}</h2>
             <Link href={slide.link} target="_blank" rel="noreferrer" aria-label="">
-              <div className={styles.sliderMore}>
-                <div>{props.t("photoSliderReadMore")}</div><BsArrowRightShort size={30} />
-              </div>
+              <h2 className={styles.sliderCardTitle}>{slide.title}</h2>
             </Link>
           </motion.div>
         ))}

@@ -23,15 +23,19 @@
 }
 
 .sliderCardTitle,
-.sliderCardDesc,
-.sliderMore {
+.sliderCardDesc {
   margin: 5px 0px 5px 10px;
 }
 
 .sliderCardTitle {
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #1e3d58;
+  transition: 0.3s all ease;
+}
+
+.sliderCardTitle:hover {
+  transform: translateX(3px);
 }
 
 .sliderCardDesc {
