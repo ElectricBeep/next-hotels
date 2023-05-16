@@ -86,7 +86,7 @@
 
 .text {
   width: 400px;
-  color: gray;
+  color: #1e3d58;
 }
 
 @media (max-width: 1200px) {
