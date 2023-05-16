@@ -1,5 +1,5 @@
 .container {
-  background-color: #eaedf0;
+  background-color: #dae3eb;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -31,11 +31,16 @@
   margin-bottom: 5px;
   padding: 10px 20px;
   border-bottom: 2px solid #1e3d58;
-  color: gray;
+  color: rgb(60, 60, 60);
 }
 
 .item:hover {
   color: #1e3d58;
+}
+
+.item p {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .title {

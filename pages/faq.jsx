@@ -95,7 +95,7 @@ const FAQ = () => {
                   variants={slideIn("left", "spring", i * 0.3, 1)}
                 >
                   <div className={styles.title} onClick={() => handleToggle(i)}>
-                    <h3>{item.question}</h3>
+                    <p>{item.question}</p>
                     {
                       selected === i
                         ? <IoIosArrowUp className={styles.icon} />
