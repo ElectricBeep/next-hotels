@@ -151,7 +151,7 @@ const HotelCosmopolit = () => {
             >
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
-                src="/img/featured/featured7.jpg"
+                src="/img/featured/featured7.webp"
                 alt="hotel cosmopolit"
                 className={styles.rightImg}
               />

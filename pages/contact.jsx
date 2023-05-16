@@ -81,7 +81,7 @@ const Contact = () => {
           whileInView="show"
           viewport={{ once: true, amoung: 0.25 }}
         >
-          <Image src="/img/sarajevoPanorama.jpg" alt="sarajevo" priority fill className={styles.img} />
+          <Image src="/img/sarajevoPanorama.webp" alt="sarajevo" priority fill className={styles.img} />
           <div className={styles.heading}>
             <motion.h1
               className={styles.headingTitle}

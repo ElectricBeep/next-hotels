@@ -115,7 +115,7 @@ const FAQ = () => {
             >
               <div className={styles.imgContainer}>
                 <motion.img
-                  src="/img/sebiljSarajevo.jpg"
+                  src="/img/sebiljSarajevo.webp"
                   alt="the city of Sarajevo"
                   className={styles.img}
                   variants={slideIn("right", "spring", 0.3, 1)}

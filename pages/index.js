@@ -36,8 +36,8 @@ export default function Home() {
           t={t}
           direction={"left"}
           features={hotelOneFeatures}
-          imgOne={"featured1.jpg"}
-          imgTwo={"cosmopolitNew.jpg"}
+          imgOne={"featured1.webp"}
+          imgTwo={"cosmopolitNew.webp"}
           hotelTitle={"Hotel Cosmopolit"}
           hotelAddress={"Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina"}
           hotelDesc={t("cosmopolitDesc")}
@@ -48,7 +48,7 @@ export default function Home() {
           t={t}
           direction={"right"}
           features={hotelTwoFeatures}
-          imgOne={"featured3.jpg"}
+          imgOne={"featured3.webp"}
           imgTwo={"delux1.jpg"}
           hotelTitle={"Hotel City View Deluxe"}
           hotelAddress={"Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina"}
@@ -60,8 +60,8 @@ export default function Home() {
           t={t}
           direction={"leftTwo"}
           features={hotelThreeFeatures}
-          imgOne={"featured6.jpg"}
-          imgTwo={"heco1.jpg"}
+          imgOne={"featured6.webp"}
+          imgTwo={"heco1.webp"}
           hotelTitle={"Hotel Hecco"}
           hotelAddress={"Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina"}
           hotelDesc={t("hecoDesc")}
