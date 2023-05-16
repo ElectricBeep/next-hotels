@@ -26,7 +26,7 @@ const HotelHeccoDeluxe = () => {
   const photos = [
     {
       id: 1,
-      img: "deluxe/deluxe1.webp"
+      img: "deluxe/deluxe1.jpg"
     },
     {
       id: 2,
@@ -155,7 +155,7 @@ const HotelHeccoDeluxe = () => {
             >
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
-                src="/img/featured/featured2.webp"
+                src="/img/featured/featured2.jpg"
                 alt="hotel City View deluxe"
                 className={styles.rightImg}
               />

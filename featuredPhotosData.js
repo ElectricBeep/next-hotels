@@ -1,14 +1,14 @@
 export const featuredPhotos = [
   {
     id: 1,
-    img: "featured/featured3.webp",
+    img: "featured/featured3.jpg",
   },
   {
     id: 2,
-    img: "featured/featured4.webp",
+    img: "featured/featured4.jpg",
   },
   {
     id: 3,
-    img: "featured/featured7.webp",
+    img: "featured/featured7.jpg",
   },
 ];
