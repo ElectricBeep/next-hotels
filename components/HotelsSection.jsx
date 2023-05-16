@@ -8,19 +8,16 @@ import { slideIn, staggerContainer } from "../utils/motion";
 
 const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelAddress, hotelDesc, linkOne, linkTwo }) => {
   return (
-    <div className={styles.container} id="hotels">
+    <div
+      className={styles.container}
+      id="hotels"
+    >
       {direction === "left" && (
-        <motion.h1
-          className={styles.heading} id="hotels"
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amoung: 0.45 }}
-        >
-          <motion.span variants={slideIn("up", "spring", 0.3, 1)}>
+        <h1 className={styles.heading}>
+          <span>
             {t("hotelSectionHeader")}
-          </motion.span>
-        </motion.h1>
+          </span>
+        </h1>
       )}
       <div className={direction === 'left' || direction === 'leftTwo' ? styles.wrapperLeft : styles.wrapperRight}>
         <motion.div
@@ -28,80 +25,76 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amoung: 0.45 }}
+          viewport={{ once: true, amoung: 0.55 }}
         >
           <motion.img
-            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.4, 1) : slideIn("right", "spring", 0.4, 1)}
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.3, 1) : slideIn("right", "spring", 0.3, 1)}
             src={`/img/featured/${imgOne}`}
             alt="hotels sarajevo"
             className={styles.firstImage}
           />
           <motion.img
-            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.45, 1) : slideIn("right", "spring", 0.45, 1)}
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.3, 1) : slideIn("right", "spring", 0.3, 1)}
             src={`/img/featured/${imgTwo}`}
             alt="hotels sarajevo"
             className={styles.secondImage}
           />
         </motion.div>
-        <div className={styles.right}>
-          <motion.div
-            className={styles.rightContainer}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amoung: 0.45 }}
-          >
+        <motion.div
+          className={styles.right}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amoung: 0.55 }}
+        >
+          <div className={styles.rightContainer}>
             <hr className={styles.hr} />
             <motion.h2
               className={styles.rightTitle}
-              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.3, 1) : slideIn("left", "spring", 0.3, 1)}
             >
               {hotelTitle}
             </motion.h2>
             <motion.p
               className={styles.rightAddress}
-              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.43, 1)}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.35, 1) : slideIn("left", "spring", 0.35, 1)}
             >
               <FaMapMarkerAlt /><span>{hotelAddress}</span>
             </motion.p>
             <motion.p
               className={styles.rightText}
-              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.45, 2) : slideIn("left", "spring", 0.45, 2)}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
             >
               {hotelDesc}
             </motion.p>
             <Link href={`/hotel/${linkOne}`}>
-              <motion.button
-                className={styles.readMoreButton}
-                variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.5, 2) : slideIn("left", "spring", 0.5, 2)}
-              >
+              <button className={styles.readMoreButton}>
                 {t("hotelsSectionButton")}
                 <FaArrowRight className={styles.leftBottomIcon} />
-              </motion.button>
+              </button>
             </Link>
-            <div className={styles.pillsContainer}>
-              {features.map((feature, i) => (
-                <motion.div
+            <motion.div
+              className={styles.pillsContainer}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.45, 1) : slideIn("left", "spring", 0.45, 1)}
+            >
+              {features.map((feature) => (
+                <div
                   className={styles.pill}
                   key={feature.id}
-                  variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", i * 0.2, 3) : slideIn("left", "spring", i * 0.2, 3)}
                 >
                   {feature.feature}
                   {feature.icon}
-                </motion.div>
+                </div>
               ))}
-            </div>
+            </motion.div>
             <Link href={linkTwo}>
-              <motion.button
-                className={styles.button}
-                variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.8, 2) : slideIn("left", "spring", 0.8, 2)}
-              >
+              <button className={styles.button}>
                 {t("headerButton")}
-              </motion.button>
+              </button>
             </Link>
             <hr className={styles.hr} />
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </div>
   )

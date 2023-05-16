@@ -79,7 +79,7 @@ const HeaderNew = ({ title, t }) => {
             <motion.a
               href="#hotels"
               className={styles.button}
-              variants={slideIn("left", "spring", 1.2, 1.8)}
+              variants={slideIn("left", "spring", 1.1, 2)}
               onClick={handleClick}
             >
               {t("headerButtonScoll")}
