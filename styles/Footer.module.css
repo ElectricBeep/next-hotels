@@ -101,7 +101,7 @@
 .itemTitle {
   margin-right: 20px;
   font-size: 26px;
-  color: rgb(106, 106, 106);
+  color: rgb(160, 160, 160);
 }
 
 .footerItemListContainer {
@@ -148,7 +148,7 @@
 
 .footerBottom {
   margin-left: 100px;
-  color: gray;
+  color: rgb(160, 160, 160);
   font-size: 14px;
 }
 
