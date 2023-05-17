@@ -260,8 +260,14 @@ const Contact = () => {
             contactPoint: [
               {
                 "@type": "ContactPoint",
-                email: "Hotel.hecco@gmail.com",
                 telephone: "+38733251100",
+                contactType: "customer support",
+                areaServed: "Bosnia and Herzegovina",
+                availableLanguage: "English, Bosnian"
+              },
+              {
+                "@type": "ContactPoint",
+                email: "Hotel.hecco@gmail.com",
                 contactType: "customer support",
                 areaServed: "Bosnia and Herzegovina",
                 availableLanguage: "English, Bosnian"
