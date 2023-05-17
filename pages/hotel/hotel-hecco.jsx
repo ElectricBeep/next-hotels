@@ -172,16 +172,16 @@ const HotelHecco = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Hotel",
-            "name": "Hotel Hecco Sarajevo",
-            "description": "Hotel Hecco Sarajevo offers modern comfort and exceptional hospitality. Located near the city's cultural center, our hotel provides air-conditioned rooms with free Wi-Fi. Experience the best of Sarajevo and book your stay at Hotel Hecco today.",
-            "image": "/img/featured/featured6.jpg",
-            "url": "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco",
-            "address": {
+            name: "Hotel Hecco Sarajevo",
+            description: "Hotel Hecco Sarajevo offers modern comfort and exceptional hospitality. Located near the city's cultural center, our hotel provides air-conditioned rooms with free Wi-Fi. Experience the best of Sarajevo and book your stay at Hotel Hecco today.",
+            image: "/img/featured/featured6.jpg",
+            url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco",
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "Medresa 1 Street",
-              "addressLocality": "Sarajevo",
-              "postalCode": "71000",
-              "addressCountry": "Bosnia and Herzegovina"
+              streetAddress: "Medresa 1 Street",
+              addressLocality: "Sarajevo",
+              postalCode: "71000",
+              addressCountry: "Bosnia and Herzegovina"
             }
           })
         }}

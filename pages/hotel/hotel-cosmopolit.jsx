@@ -172,16 +172,16 @@ const HotelCosmopolit = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Hotel",
-            "name": "Hotel Cosmopolit Sarajevo",
-            "description": "Hotel Cosmopolit Sarajevo offers a perfect blend of luxury and comfort. With 16 luxurious rooms and exceptional amenities, we ensure our guests enjoy an exceptional experience during their stay. Discover the heart of the city and book your stay at Hotel Cosmopolit today.",
-            "image": "/img/featured/featured7.jpg",
-            "url": "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
-            "address": {
+            name: "Hotel Cosmopolit Sarajevo",
+            description: "Hotel Cosmopolit Sarajevo offers a perfect blend of luxury and comfort. With 16 luxurious rooms and exceptional amenities, we ensure our guests enjoy an exceptional experience during their stay. Discover the heart of the city and book your stay at Hotel Cosmopolit today.",
+            image: "/img/featured/featured7.jpg",
+            url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
+            address: {
               "@type": "PostalAddress",
-              "streetAddress": "Radićeva 15 Street",
-              "addressLocality": "Sarajevo",
-              "postalCode": "71000",
-              "addressCountry": "Bosnia and Herzegovina"
+              streetAddress: "Radićeva 15 Street",
+              addressLocality: "Sarajevo",
+              postalCode: "71000",
+              addressCountry: "Bosnia and Herzegovina"
             }
           })
         }}

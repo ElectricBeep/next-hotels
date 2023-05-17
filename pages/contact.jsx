@@ -255,16 +255,16 @@ const Contact = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Sarajevo Hecco Hotels",
-            "url": "https://www.hecco-hotels-sarajevo.com/",
-            "contactPoint": [
+            name: "Sarajevo Hecco Hotels",
+            url: "https://www.hecco-hotels-sarajevo.com/",
+            contactPoint: [
               {
                 "@type": "ContactPoint",
-                "email": "Hotel.hecco@gmail.com",
-                "telephone": "+38733251100",
-                "contactType": "customer support",
-                "areaServed": "Bosnia and Herzegovina",
-                "availableLanguage": "English, Bosnian"
+                email: "Hotel.hecco@gmail.com",
+                telephone: "+38733251100",
+                contactType: "customer support",
+                areaServed: "Bosnia and Herzegovina",
+                availableLanguage: "English, Bosnian"
               }
             ]
           })
