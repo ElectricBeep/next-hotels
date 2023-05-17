@@ -11,6 +11,7 @@ import styles from "../../styles/HotelCosmopolit.module.css";
 import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";
+import Script from "next/script";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -66,9 +67,35 @@ const HotelHecco = () => {
     <>
       <Head>
         <title>Hotel Hecco Sarajevo</title>
-        <meta name="description" content="Hotel Hecco Sarajevo" />
+        <meta name="description" content="Experience modern comfort and exceptional hospitality at Hotel Hecco in Sarajevo. Our hotel, located near the city's cultural center, offers air-conditioned rooms with free Wi-Fi. Book your stay today and enjoy a remarkable experience." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              "name": "Hotel Hecco Sarajevo",
+              "description": "Hotel Hecco Sarajevo offers modern comfort and exceptional hospitality. Located near the city's cultural center, our hotel provides air-conditioned rooms with free Wi-Fi. Experience the best of Sarajevo and book your stay at Hotel Hecco today.",
+              "image": "/img/featured/featured6.jpg",
+              "url": "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Medresa 1 Street",
+                "addressLocality": "Sarajevo",
+                "postalCode": "71000",
+                "addressCountry": "Bosnia and Herzegovina"
+              }
+            })
+          }}
+        />
+
+        <meta property="og:title" content="Hotel Hecco Sarajevo" />
+        <meta property="og:description" content="Experience modern comfort and exceptional hospitality at Hotel Hecco in Sarajevo. Our hotel, located near the city's cultural center, offers air-conditioned rooms with free Wi-Fi. Book your stay today and enjoy a remarkable experience." />
+        <meta property="og:image" content="/img/featured/featured6.jpg" />
+        <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco" />
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
