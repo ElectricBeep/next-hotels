@@ -73,29 +73,6 @@ const Contact = () => {
         <meta name="description" content="Contact Sarajevo Hecco Hotels for inquiries, reservations, or any other assistance. Get in touch with our friendly staff and we'll be happy to assist you." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
-
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Sarajevo Hecco Hotels",
-              "url": "https://www.hecco-hotels-sarajevo.com/",
-              "contactPoint": [
-                {
-                  "@type": "ContactPoint",
-                  "email": "Hotel.hecco@gmail.com",
-                  "telephone": "+38733251100",
-                  "contactType": "customer support",
-                  "areaServed": "Bosnia and Herzegovina",
-                  "availableLanguage": "English, Bosnian"
-                }
-              ]
-            })
-          }}
-        />
-
         <meta property="og:title" content="Contact Sarajevo Hecco Hotels" />
         <meta property="og:description" content="Contact Sarajevo Hecco Hotels for inquiries, reservations, or any other assistance. Get in touch with our friendly staff and we'll be happy to assist you." />
         <meta property="og:image" content="/hotel.png" />
@@ -271,6 +248,27 @@ const Contact = () => {
           </div >
         </div >
       </div>
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Sarajevo Hecco Hotels",
+            "url": "https://www.hecco-hotels-sarajevo.com/",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "email": "Hotel.hecco@gmail.com",
+                "telephone": "+38733251100",
+                "contactType": "customer support",
+                "areaServed": "Bosnia and Herzegovina",
+                "availableLanguage": "English, Bosnian"
+              }
+            ]
+          })
+        }}
+      />
     </>
   )
 }
