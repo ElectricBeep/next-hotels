@@ -30,6 +30,7 @@ export default function Home() {
         <meta name="description" content="Discover the perfect destination for your next getaway with Hecco Hotels in Sarajevo. Our premier hotel renting service offers a variety of luxurious accommodations, including stunning city escapes and beachfront retreats. Book your dream hotel in Sarajevo today and start creating unforgettable memories." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Sarajevo Hotels" />
         <meta property="og:description" content="Discover the perfect destination for your next getaway with Hecco Hotels in Sarajevo. Our premier hotel renting service offers a variety of luxurious accommodations, including stunning city escapes and beachfront retreats. Book your dream hotel in Sarajevo today and start creating unforgettable memories." />
         <meta property="og:image" content="/hotel.png" />

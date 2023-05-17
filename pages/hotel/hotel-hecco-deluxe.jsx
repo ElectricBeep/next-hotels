@@ -74,6 +74,7 @@ const HotelHeccoDeluxe = () => {
         <meta name="description" content="Experience breathtaking views and luxurious accommodations at Hotel City View Deluxe in Sarajevo. Our hotel, located on Ferhadija Street, offers stunning panoramic views of the entire city. Book your stay today and indulge in a remarkable experience." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel City View Deluxe Sarajevo" />
         <meta property="og:description" content="Experience breathtaking views and luxurious accommodations at Hotel City View Deluxe in Sarajevo. Our hotel, located on Ferhadija Street, offers stunning panoramic views of the entire city. Book your stay today and indulge in a remarkable experience." />
         <meta property="og:image" content="/img/featured/featured3.jpg" />

@@ -70,6 +70,7 @@ const HotelCosmopolit = () => {
         <meta name="description" content="Experience luxury and comfort at Hotel Cosmopolit in Sarajevo. Our hotel offers 16 luxurious rooms, exceptional amenities, and a prime location in the heart of the city. Book your stay today and enjoy a memorable experience." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel Cosmopolit Sarajevo" />
         <meta property="og:description" content="Experience luxury and comfort at Hotel Cosmopolit in Sarajevo. Our hotel offers 16 luxurious rooms, exceptional amenities, and a prime location in the heart of the city. Book your stay today and enjoy a memorable experience." />
         <meta property="og:image" content="/img/featured/featured7.jpg" />

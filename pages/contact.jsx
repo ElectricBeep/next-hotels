@@ -73,6 +73,7 @@ const Contact = () => {
         <meta name="description" content="Contact Sarajevo Hecco Hotels for inquiries, reservations, or any other assistance. Get in touch with our friendly staff and we'll be happy to assist you." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Contact Sarajevo Hecco Hotels" />
         <meta property="og:description" content="Contact Sarajevo Hecco Hotels for inquiries, reservations, or any other assistance. Get in touch with our friendly staff and we'll be happy to assist you." />
         <meta property="og:image" content="/hotel.png" />

@@ -70,6 +70,7 @@ const HotelHecco = () => {
         <meta name="description" content="Experience modern comfort and exceptional hospitality at Hotel Hecco in Sarajevo. Our hotel, located near the city's cultural center, offers air-conditioned rooms with free Wi-Fi. Book your stay today and enjoy a remarkable experience." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel Hecco Sarajevo" />
         <meta property="og:description" content="Experience modern comfort and exceptional hospitality at Hotel Hecco in Sarajevo. Our hotel, located near the city's cultural center, offers air-conditioned rooms with free Wi-Fi. Book your stay today and enjoy a remarkable experience." />
         <meta property="og:image" content="/img/featured/featured6.jpg" />

@@ -65,6 +65,7 @@ const FAQ = () => {
         <meta name="description" content="Frequently asked questions about Sarajevo Hecco Hotels. Find answers to common inquiries about our services, amenities, reservations, and more." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/hotel.png" />
+        <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Sarajevo Hotels FAQ" />
         <meta property="og:description" content="Frequently asked questions about Sarajevo Hecco Hotels. Find answers to common inquiries about our services, amenities, reservations, and more." />
         <meta property="og:image" content="/hotel.png" />
