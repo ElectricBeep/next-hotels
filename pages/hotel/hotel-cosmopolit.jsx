@@ -182,7 +182,9 @@ const HotelCosmopolit = () => {
               addressLocality: "Sarajevo",
               postalCode: "71000",
               addressCountry: "Bosnia and Herzegovina"
-            }
+            },
+            telephone: "+38733251100",
+            priceRange: "156BAM"
           })
         }}
       />

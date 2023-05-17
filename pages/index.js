@@ -99,7 +99,9 @@ export default function Home() {
                     addressLocality: "Sarajevo",
                     postalCode: "71000",
                     addressCountry: "Bosnia and Herzegovina"
-                  }
+                  },
+                  telephone: "+38733251100",
+                  priceRange: "156BAM"
                 }
               },
               {
@@ -117,7 +119,9 @@ export default function Home() {
                     addressLocality: "Sarajevo",
                     postalCode: "71000",
                     addressCountry: "Bosnia and Herzegovina"
-                  }
+                  },
+                  telephone: "+38733559995",
+                  priceRange: "161BAM"
                 }
               },
               {
@@ -135,7 +139,9 @@ export default function Home() {
                     addressLocality: "Sarajevo",
                     postalCode: "71000",
                     addressCountry: "Bosnia and Herzegovina"
-                  }
+                  },
+                  telephone: "+38733273730",
+                  priceRange: "160BAM"
                 }
               }
             ]

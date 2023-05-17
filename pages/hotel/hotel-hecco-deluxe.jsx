@@ -186,7 +186,9 @@ const HotelHeccoDeluxe = () => {
               addressLocality: "Sarajevo",
               postalCode: "71000",
               addressCountry: "Bosnia and Herzegovina"
-            }
+            },
+            telephone: "+38733559995",
+            priceRange: "161BAM"
           })
         }}
       />
