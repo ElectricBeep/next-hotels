@@ -166,6 +166,7 @@ const HotelHecco = () => {
         </div>
       </div>
       <Script
+        key="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
