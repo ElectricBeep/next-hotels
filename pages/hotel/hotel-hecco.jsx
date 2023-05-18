@@ -92,8 +92,14 @@ const HotelHecco = () => {
                 postalCode: "71000",
                 addressCountry: "Bosnia and Herzegovina"
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 43.866440067632446,
+                longitude: 18.432669683324896
+              },
               telephone: "+38733273730",
-              priceRange: "160BAM"
+              priceRange: "160BAM",
+              acceptsReservations: "True"
             })
           }}
         />

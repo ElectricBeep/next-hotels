@@ -56,8 +56,14 @@ export default function Home() {
                       postalCode: "71000",
                       addressCountry: "Bosnia and Herzegovina"
                     },
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: 43.85781322192979,
+                      longitude: 18.417217999616973
+                    },
                     telephone: "+38733251100",
-                    priceRange: "156BAM"
+                    priceRange: "156BAM",
+                    acceptsReservations: "True"
                   }
                 },
                 {
@@ -76,8 +82,14 @@ export default function Home() {
                       postalCode: "71000",
                       addressCountry: "Bosnia and Herzegovina"
                     },
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: 43.85868426883366,
+                      longitude: 18.421910579697865
+                    },
                     telephone: "+38733559995",
-                    priceRange: "161BAM"
+                    priceRange: "161BAM",
+                    acceptsReservations: "True"
                   }
                 },
                 {
@@ -96,8 +108,14 @@ export default function Home() {
                       postalCode: "71000",
                       addressCountry: "Bosnia and Herzegovina"
                     },
+                    geo: {
+                      "@type": "GeoCoordinates",
+                      latitude: 43.866440067632446,
+                      longitude: 18.432669683324896
+                    },
                     telephone: "+38733273730",
-                    priceRange: "160BAM"
+                    priceRange: "160BAM",
+                    acceptsReservations: "True"
                   }
                 }
               ]

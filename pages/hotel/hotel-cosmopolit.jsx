@@ -92,8 +92,14 @@ const HotelCosmopolit = () => {
                 postalCode: "71000",
                 addressCountry: "Bosnia and Herzegovina"
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 43.85781322192979,
+                longitude: 18.417217999616973
+              },
               telephone: "+38733251100",
-              priceRange: "156BAM"
+              priceRange: "156BAM",
+              acceptsReservations: "True"
             })
           }}
         />
