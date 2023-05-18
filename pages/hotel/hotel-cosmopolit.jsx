@@ -7,7 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 
 import Gallery from "../../components/Gallery";
-import { hotelOneFeatures } from "../../hotelOneFeatures";
+import { hotelOneFeatures } from "../../hotelFeatures";
 import styles from "../../styles/HotelCosmopolit.module.css";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";

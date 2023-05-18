@@ -1,13 +1,28 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import { featuredPhotos } from "@/featuredPhotosData";
 import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { slideIn, staggerContainer, textVariant2, textContainer, textVariant3 } from "../utils/motion";
 
 const HeaderNew = ({ title, t }) => {
   const [current, setCurrent] = useState(0);
+
+  const featuredPhotos = [
+    {
+      id: 1,
+      img: "featured/featured3.jpg",
+    },
+    {
+      id: 2,
+      img: "featured/featured4.jpg",
+    },
+    {
+      id: 3,
+      img: "featured/featured7.jpg",
+    },
+  ];
+
   const length = featuredPhotos.length;
 
   const nextSlide = () => {

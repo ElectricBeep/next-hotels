@@ -8,9 +8,9 @@ import { useTranslation } from 'next-i18next'
 
 import Gallery from "../../components/Gallery";
 import styles from "../../styles/HotelCosmopolit.module.css";
-import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";
+import { hotelTwoFeatures } from "@/hotelFeatures";
 
 export async function getStaticProps({ locale }) {
   return {

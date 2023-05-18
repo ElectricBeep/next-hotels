@@ -4,12 +4,10 @@ import { useTranslation } from 'next-i18next'
 
 import styles from '@/styles/Home.module.css'
 import HotelsSection from '@/components/HotelsSection'
-import { hotelOneFeatures } from '@/hotelOneFeatures'
-import { hotelTwoFeatures } from '@/hotelTwoFeatures'
+import { hotelOneFeatures, hotelTwoFeatures, hotelThreeFeatures } from '@/hotelFeatures'
 import Attractions from '@/components/Attractions'
 import Testimonials from '@/components/Testimonials'
 import HeaderNew from '@/components/HeaderNew'
-import { hotelThreeFeatures } from '@/hotelThreeFeatures'
 
 export async function getStaticProps({ locale }) {
   return {
