@@ -76,7 +76,7 @@ const Footer = ({ t }) => {
                 <Link href="https://www.facebook.com/hotelcosmopolit.sarajevo/" target="_blank" rel="noreferrer" aria-label="Visit facebook page of the Cosmopolit hotel.">
                   <AiFillFacebook className={styles.icon} />
                 </Link>
-                <Link href="https://www.instagram.com/hotel.cosmopolit/?hl=en" target="_blank" rel="noreferrer" aria-label="Visit instagram page of the hotel.">
+                <Link href="https://www.instagram.com/heccohoteli/?hl=en" target="_blank" rel="noreferrer" aria-label="Visit instagram page of the hotel.">
                   <FaInstagramSquare className={styles.icon} />
                 </Link>
               </div>
