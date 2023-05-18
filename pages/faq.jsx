@@ -8,7 +8,6 @@ import { useTranslation } from 'next-i18next'
 import Details from "../components/Details";
 import styles from "../styles/FAQ.module.css";
 import { slideIn, staggerContainer } from "../utils/motion";
-import Script from "next/script";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -70,6 +69,58 @@ const FAQ = () => {
         <meta property="og:description" content="Frequently asked questions about Sarajevo Hecco Hotels. Find answers to common inquiries about our services, amenities, reservations, and more." />
         <meta property="og:image" content="/hotel.png" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/faq" />
+        <script
+          key="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: [
+                {
+                  "@type": "Question",
+                  name: "What's the best time of year to visit Sarajevo?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The best time to visit Bosnia-Herzegovina is May, June and early September, when the heat fades and the hiking is idyllic. February and March are great for winter activities, as the sun is out and the days are longer than in midwinter."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Do I need passport or visa to enter the country?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Bosnia and Herzegovina welcomes thousands of tourists every year. If you want to visit Bosnia, click the following link to check if you need a visa: https://visaguide.world/europe/bosnia-herzegovina-visa/"
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "What are some basic facts about Sarajevo?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sarajevo had the first tram in Europe, the second in the World. Sarajevo was first to have water supply network in 1400s. Sarajevo's event triggered the World War 1. Sarajevo held the Winter Olympic games in 1984. Sarajevo siege is the longest siege in modern hsitory."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "Where should I go in Sarajevo?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sarajevo is a very historically significant city, its landmarks come with a story so it is recommended taking a walking tour of Sarajevo on your arrival. You can check some of Sarajevo's attractions on the Homepage."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  name: "What major event happened in Sarajevo?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "The event in Sarajevo was the catalyst for the outbreak of World War I. Additionally, in the 1990s, Sarajevo suffered through the longest siege in modern history."
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
@@ -138,58 +189,6 @@ const FAQ = () => {
         </div>
       </div>
       <Details t={t} />
-      <Script
-        key="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "What's the best time of year to visit Sarajevo?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The best time to visit Bosnia-Herzegovina is May, June and early September, when the heat fades and the hiking is idyllic. February and March are great for winter activities, as the sun is out and the days are longer than in midwinter."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Do I need passport or visa to enter the country?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Bosnia and Herzegovina welcomes thousands of tourists every year. If you want to visit Bosnia, click the following link to check if you need a visa: https://visaguide.world/europe/bosnia-herzegovina-visa/"
-                }
-              },
-              {
-                "@type": "Question",
-                name: "What are some basic facts about Sarajevo?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sarajevo had the first tram in Europe, the second in the World. Sarajevo was first to have water supply network in 1400s. Sarajevo's event triggered the World War 1. Sarajevo held the Winter Olympic games in 1984. Sarajevo siege is the longest siege in modern hsitory."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "Where should I go in Sarajevo?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sarajevo is a very historically significant city, its landmarks come with a story so it is recommended taking a walking tour of Sarajevo on your arrival. You can check some of Sarajevo's attractions on the Homepage."
-                }
-              },
-              {
-                "@type": "Question",
-                name: "What major event happened in Sarajevo?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "The event in Sarajevo was the catalyst for the outbreak of World War I. Additionally, in the 1990s, Sarajevo suffered through the longest siege in modern history."
-                }
-              }
-            ]
-          })
-        }}
-      />
     </>
   )
 }

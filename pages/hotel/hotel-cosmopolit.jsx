@@ -11,7 +11,6 @@ import { hotelOneFeatures } from "../../hotelOneFeatures";
 import styles from "../../styles/HotelCosmopolit.module.css";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";
-import Script from "next/script";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -75,6 +74,29 @@ const HotelCosmopolit = () => {
         <meta property="og:description" content="Experience luxury and comfort at Hotel Cosmopolit in Sarajevo. Our hotel offers 16 luxurious rooms, exceptional amenities, and a prime location in the heart of the city. Book your stay today and enjoy a memorable experience." />
         <meta property="og:image" content="/img/featured/featured7.jpg" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit" />
+        <script
+          key="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              name: "Hotel Cosmopolit Sarajevo",
+              description: "Hotel Cosmopolit Sarajevo offers a perfect blend of luxury and comfort. With 16 luxurious rooms and exceptional amenities, we ensure our guests enjoy an exceptional experience during their stay. Discover the heart of the city and book your stay at Hotel Cosmopolit today.",
+              image: "/img/featured/featured7.jpg",
+              url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Radićeva 15 Street",
+                addressLocality: "Sarajevo",
+                postalCode: "71000",
+                addressCountry: "Bosnia and Herzegovina"
+              },
+              telephone: "+38733251100",
+              priceRange: "156BAM"
+            })
+          }}
+        />
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
@@ -166,29 +188,6 @@ const HotelCosmopolit = () => {
           <Gallery photos={photos} t={t} />
         </div>
       </div>
-      <Script
-        key="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Hotel",
-            name: "Hotel Cosmopolit Sarajevo",
-            description: "Hotel Cosmopolit Sarajevo offers a perfect blend of luxury and comfort. With 16 luxurious rooms and exceptional amenities, we ensure our guests enjoy an exceptional experience during their stay. Discover the heart of the city and book your stay at Hotel Cosmopolit today.",
-            image: "/img/featured/featured7.jpg",
-            url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Radićeva 15 Street",
-              addressLocality: "Sarajevo",
-              postalCode: "71000",
-              addressCountry: "Bosnia and Herzegovina"
-            },
-            telephone: "+38733251100",
-            priceRange: "156BAM"
-          })
-        }}
-      />
     </>
   )
 }

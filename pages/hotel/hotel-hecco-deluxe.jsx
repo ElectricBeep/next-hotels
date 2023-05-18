@@ -11,7 +11,6 @@ import styles from "../../styles/HotelCosmopolit.module.css";
 import { hotelTwoFeatures } from "../../hotelTwoFeatures";
 import { slideIn, staggerContainer } from "../../utils/motion";
 import Head from "next/head";
-import Script from "next/script";
 
 export async function getStaticProps({ locale }) {
   return {
@@ -79,6 +78,29 @@ const HotelHeccoDeluxe = () => {
         <meta property="og:description" content="Experience breathtaking views and luxurious accommodations at Hotel City View Deluxe in Sarajevo. Our hotel, located on Ferhadija Street, offers stunning panoramic views of the entire city. Book your stay today and indulge in a remarkable experience." />
         <meta property="og:image" content="/img/featured/featured3.jpg" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe" />
+        <script
+          key="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Hotel",
+              name: "Hotel City View Deluxe Sarajevo",
+              description: "Hotel City View Deluxe Sarajevo is renowned for its breathtaking views and luxurious accommodations. Situated on Ferhadija Street, our hotel offers panoramic views of the entire city. Discover a world of elegance and book your stay at Hotel City View Deluxe today.",
+              image: "/img/featured/featured3.jpg",
+              url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "Ferhadija 2 Street",
+                addressLocality: "Sarajevo",
+                postalCode: "71000",
+                addressCountry: "Bosnia and Herzegovina"
+              },
+              telephone: "+38733559995",
+              priceRange: "161BAM"
+            })
+          }}
+        />
       </Head>
       <div className={styles.container}>
         <div className={styles.wrapper}>
@@ -170,29 +192,6 @@ const HotelHeccoDeluxe = () => {
           <Gallery photos={photos} t={t} />
         </div>
       </div>
-      <Script
-        key="structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Hotel",
-            name: "Hotel City View Deluxe Sarajevo",
-            description: "Hotel City View Deluxe Sarajevo is renowned for its breathtaking views and luxurious accommodations. Situated on Ferhadija Street, our hotel offers panoramic views of the entire city. Discover a world of elegance and book your stay at Hotel City View Deluxe today.",
-            image: "/img/featured/featured3.jpg",
-            url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Ferhadija 2 Street",
-              addressLocality: "Sarajevo",
-              postalCode: "71000",
-              addressCountry: "Bosnia and Herzegovina"
-            },
-            telephone: "+38733559995",
-            priceRange: "161BAM"
-          })
-        }}
-      />
     </>
   )
 }
