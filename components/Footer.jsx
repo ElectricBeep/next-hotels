@@ -85,7 +85,7 @@ const Footer = ({ t }) => {
         </div>
       </div>
       <hr className={styles.hr} />
-      <p className={styles.footerBottom}>{t("footerRights")}</p>
+      <p className={styles.footerBottom}>{t("footerRights")} {new Date().getFullYear()}</p>
     </div>
   )
 }
