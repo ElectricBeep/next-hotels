@@ -63,13 +63,13 @@ const HeaderNew = ({ title, t }) => {
 
   return (
     <div className={styles.container}>
-      <motion.div className={styles.wrapper}
+      <div className={styles.wrapper}
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amoung: 0.25 }}
       >
-        <motion.div
+        <div
           className={styles.left}
           variants={slideIn("left", "spring", 0.3, 1)}
         >
@@ -117,8 +117,8 @@ const HeaderNew = ({ title, t }) => {
               {t("headerButtonScoll")}
             </a>
           </div>
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className={styles.right}
           variants={slideIn("right", "spring", 0.3, 1)}
         >
@@ -173,8 +173,8 @@ const HeaderNew = ({ title, t }) => {
               </div>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   )
 }
