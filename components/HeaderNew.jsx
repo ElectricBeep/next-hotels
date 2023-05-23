@@ -49,7 +49,7 @@ const HeaderNew = ({ title, t }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div
+        <motion.div
           className={styles.left}
           variants={staggerContainer}
           initial="hidden"
@@ -57,84 +57,84 @@ const HeaderNew = ({ title, t }) => {
           viewport={{ once: true, amoung: 0.25 }}
         >
           <div className={styles.content}>
-            <h2
+            <motion.h2
               className={styles.titleTop}
               variants={slideIn("left", "spring", 0.3, 1)}
             >
               {t("headerTitleOne")}
-            </h2>
-            <h1
+            </motion.h2>
+            <motion.h1
               className={styles.titleMid}
               variants={textContainer}
             >
               {Array.from(title).map((letter, index) => (
-                <span variants={textVariant2} key={index}>
+                <motion.span variants={textVariant2} key={index}>
                   {letter === " " ? "\u00A0" : letter}
-                </span>
+                </motion.span>
               ))}
-            </h1>
-            <h2
+            </motion.h1>
+            <motion.h2
               className={styles.titleBotTop}
               variants={slideIn("left", "spring", 0.9, 1)}
             >
               {t("headerTitleTwo")} <span className={styles.redText}>Sarajevo?</span>
-            </h2>
-            <h2
+            </motion.h2>
+            <motion.h2
               className={styles.titleBotMid}
               variants={slideIn("left", "spring", 1.0, 1.2)}
             >
               {t("headerTitleThree1")} <span className={styles.bottomTitleSpan}>{t("headerTitleThree2")}</span>,
-            </h2>
-            <h3
+            </motion.h2>
+            <motion.h3
               className={styles.titleBotBot}
               variants={slideIn("left", "spring", 1.1, 1.5)}
             >
               {t("headerTitleThree3")} <span className={styles.bottomTitleSpanTwo}>{t("headerTitleThree4")}</span>
-            </h3>
-            <a
+            </motion.h3>
+            <motion.a
               href="#hotels"
               className={styles.button}
               variants={slideIn("left", "spring", 1.1, 2)}
               onClick={handleClick}
             >
               {t("headerButtonScoll")}
-            </a>
+            </motion.a>
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
           className={styles.right}
           variants={staggerContainer}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amoung: 0.25 }}
         >
-          <div
+          <motion.div
             className={styles.imgContainer}
             variants={slideIn("up", "spring", 0.3, 1)}
           >
-            <div
+            <motion.div
               className={`${styles.arrowIconContainer} ${styles.arrowLeft}`}
               variants={slideIn("left", "spring", 0.8, 1)}
             >
               <FiChevronLeft className={styles.arrowIcon} onClick={prevSlide} />
-            </div>
-            <div
+            </motion.div>
+            <motion.div
               className={styles.mobileTitleContainer}
               variants={textContainer}
             >
-              <h2
+              <motion.h2
                 variants={slideIn("up", "spring", 0.5, 1)}
               >
                 {t("headerTitleOne")}
-              </h2>
-              <h1>
+              </motion.h2>
+              <motion.h1>
                 {Array.from(title).map((letter, index) => (
-                  <span variants={textVariant3} key={index}>
+                  <motion.span variants={textVariant3} key={index}>
                     {letter === " " ? "\u00A0" : letter}
-                  </span>
+                  </motion.span>
                 ))}
-              </h1>
-            </div>
+              </motion.h1>
+            </motion.div>
             {featuredPhotos.map((img, index) => (
               <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
                 {index === current && (
@@ -142,14 +142,14 @@ const HeaderNew = ({ title, t }) => {
                 )}
               </div>
             ))}
-            <div
+            <motion.div
               className={`${styles.arrowIconContainer} ${styles.arrowRight}`}
               variants={slideIn("right", "spring", 0.8, 1)}
             >
               <FiChevronRight className={styles.arrowIcon} onClick={nextSlide} />
-            </div>
-          </div>
-          <div
+            </motion.div>
+          </motion.div>
+          <motion.div
             className={styles.dotContainer}
             variants={slideIn("down", "spring", 1, 1)}
           >
@@ -158,8 +158,8 @@ const HeaderNew = ({ title, t }) => {
                 &#9679;
               </div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   )
