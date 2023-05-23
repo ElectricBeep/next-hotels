@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { slideIn, staggerContainer, textVariant2, textContainer, textVariant3 } from "../utils/motion";
 
 const HeaderNew = ({ t }) => {
   const [current, setCurrent] = useState(0);
@@ -84,9 +83,7 @@ const HeaderNew = ({ t }) => {
               <h2>
                 {t("headerTitleOne")}
               </h2>
-              <h1>
-                SARAJEVO
-              </h1>
+              <h1>SARAJEVO</h1>
             </div>
             {featuredPhotos.map((img, index) => (
               <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
