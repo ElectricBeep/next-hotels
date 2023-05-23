@@ -23,6 +23,21 @@ const HeaderNew = ({ title, t }) => {
     },
   ];
 
+  const featuredMobilePhotos = [
+    {
+      id: 1,
+      img: "featured/featured3mob.jpg",
+    },
+    {
+      id: 2,
+      img: "featured/featured4mob.jpg",
+    },
+    {
+      id: 3,
+      img: "featured/featured7mob.jpg",
+    },
+  ];
+
   const length = featuredPhotos.length;
 
   const nextSlide = () => {
@@ -134,7 +149,7 @@ const HeaderNew = ({ title, t }) => {
                 ))}
               </h1>
             </div>
-            {featuredPhotos.map((img, index) => (
+            {featuredMobilePhotos.map((img, index) => (
               <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
                 {index === current && (
                   <img src={`/img/${img.img}`} alt="header" className={styles.img} />
@@ -152,7 +167,7 @@ const HeaderNew = ({ title, t }) => {
             className={styles.dotContainer}
             variants={slideIn("down", "spring", 1, 1)}
           >
-            {featuredPhotos.map((img, index) => (
+            {featuredMobilePhotos.map((img, index) => (
               <div key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeDot : styles.dot}>
                 &#9679;
               </div>
