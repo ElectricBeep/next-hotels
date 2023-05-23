@@ -23,21 +23,6 @@ const HeaderNew = ({ title, t }) => {
     },
   ];
 
-  const featuredMobilePhotos = [
-    {
-      id: 1,
-      img: "featured/featured3mob.jpg",
-    },
-    {
-      id: 2,
-      img: "featured/featured4mob.jpg",
-    },
-    {
-      id: 3,
-      img: "featured/featured7mob.jpg",
-    },
-  ];
-
   const length = featuredPhotos.length;
 
   const nextSlide = () => {
@@ -63,82 +48,44 @@ const HeaderNew = ({ title, t }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amoung: 0.25 }}
-      >
-        <div
-          className={styles.left}
-          variants={slideIn("left", "spring", 0.3, 1)}
-        >
+      <div className={styles.wrapper}>
+        <div className={styles.left}>
           <div className={styles.content}>
-            <h2
-              className={styles.titleTop}
-
-            >
+            <h2 className={styles.titleTop}>
               {t("headerTitleOne")}
             </h2>
-            <h1
-              className={styles.titleMid}
-              variants={textContainer}
-            >
+            <h1 className={styles.titleMid}>
               {Array.from(title).map((letter, index) => (
                 <span variants={textVariant2} key={index}>
                   {letter === " " ? "\u00A0" : letter}
                 </span>
               ))}
             </h1>
-            <h2
-              className={styles.titleBotTop}
-              variants={slideIn("left", "spring", 0.9, 1)}
-            >
+            <h2 className={styles.titleBotTop}>
               {t("headerTitleTwo")} <span className={styles.redText}>Sarajevo?</span>
             </h2>
-            <h2
-              className={styles.titleBotMid}
-              variants={slideIn("left", "spring", 1.0, 1.2)}
-            >
+            <h2 className={styles.titleBotMid}>
               {t("headerTitleThree1")} <span className={styles.bottomTitleSpan}>{t("headerTitleThree2")}</span>,
             </h2>
-            <h3
-              className={styles.titleBotBot}
-              variants={slideIn("left", "spring", 1.1, 1.5)}
-            >
+            <h3 className={styles.titleBotBot}>
               {t("headerTitleThree3")} <span className={styles.bottomTitleSpanTwo}>{t("headerTitleThree4")}</span>
             </h3>
             <a
               href="#hotels"
               className={styles.button}
-              variants={slideIn("left", "spring", 1.1, 2)}
               onClick={handleClick}
             >
               {t("headerButtonScoll")}
             </a>
           </div>
         </div>
-        <div
-          className={styles.right}
-          variants={slideIn("right", "spring", 0.3, 1)}
-        >
-          <div
-            className={styles.imgContainer}
-            variants={slideIn("up", "spring", 0.3, 1)}
-          >
-            <div
-              className={`${styles.arrowIconContainer} ${styles.arrowLeft}`}
-              variants={slideIn("left", "spring", 0.8, 1)}
-            >
+        <div className={styles.right}>
+          <div className={styles.imgContainer}>
+            <div className={`${styles.arrowIconContainer} ${styles.arrowLeft}`}>
               <FiChevronLeft className={styles.arrowIcon} onClick={prevSlide} />
             </div>
-            <div
-              className={styles.mobileTitleContainer}
-              variants={textContainer}
-            >
-              <h2
-                variants={slideIn("up", "spring", 0.5, 1)}
-              >
+            <div className={styles.mobileTitleContainer}>
+              <h2>
                 {t("headerTitleOne")}
               </h2>
               <h1>
@@ -149,25 +96,19 @@ const HeaderNew = ({ title, t }) => {
                 ))}
               </h1>
             </div>
-            {featuredMobilePhotos.map((img, index) => (
+            {featuredPhotos.map((img, index) => (
               <div className={index === current ? styles.slideActive : styles.slide} key={img.id}>
                 {index === current && (
                   <img src={`/img/${img.img}`} alt="header" className={styles.img} />
                 )}
               </div>
             ))}
-            <div
-              className={`${styles.arrowIconContainer} ${styles.arrowRight}`}
-              variants={slideIn("right", "spring", 0.8, 1)}
-            >
+            <div className={`${styles.arrowIconContainer} ${styles.arrowRight}`}>
               <FiChevronRight className={styles.arrowIcon} onClick={nextSlide} />
             </div>
           </div>
-          <div
-            className={styles.dotContainer}
-            variants={slideIn("down", "spring", 1, 1)}
-          >
-            {featuredMobilePhotos.map((img, index) => (
+          <div className={styles.dotContainer}>
+            {featuredPhotos.map((img, index) => (
               <div key={img.id} onClick={() => goToSlide(index)} className={current === index ? styles.activeDot : styles.dot}>
                 &#9679;
               </div>
