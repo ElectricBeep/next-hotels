@@ -124,7 +124,7 @@ export default function Home() {
         />
       </Head>
       <main className={styles.main}>
-        <HeaderNew title="SARAJEVO" t={t} />
+        <HeaderNew t={t} />
         <HotelsSection
           t={t}
           direction={"left"}

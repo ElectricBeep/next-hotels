@@ -5,7 +5,7 @@ import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { slideIn, staggerContainer, textVariant2, textContainer, textVariant3 } from "../utils/motion";
 
-const HeaderNew = ({ title, t }) => {
+const HeaderNew = ({ t }) => {
   const [current, setCurrent] = useState(0);
 
   const featuredPhotos = [
@@ -55,11 +55,7 @@ const HeaderNew = ({ title, t }) => {
               {t("headerTitleOne")}
             </h2>
             <h1 className={styles.titleMid}>
-              {Array.from(title).map((letter, index) => (
-                <span variants={textVariant2} key={index}>
-                  {letter === " " ? "\u00A0" : letter}
-                </span>
-              ))}
+              SARAJEVO
             </h1>
             <h2 className={styles.titleBotTop}>
               {t("headerTitleTwo")} <span className={styles.redText}>Sarajevo?</span>
@@ -89,11 +85,7 @@ const HeaderNew = ({ title, t }) => {
                 {t("headerTitleOne")}
               </h2>
               <h1>
-                {Array.from(title).map((letter, index) => (
-                  <span variants={textVariant3} key={index}>
-                    {letter === " " ? "\u00A0" : letter}
-                  </span>
-                ))}
+                SARAJEVO
               </h1>
             </div>
             {featuredPhotos.map((img, index) => (
