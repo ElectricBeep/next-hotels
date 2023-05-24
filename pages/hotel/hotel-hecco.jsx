@@ -26,39 +26,39 @@ const HotelHecco = () => {
   const photos = [
     {
       id: 1,
-      img: "hecco/hecco3.jpg"
+      img: "hecco/hecco3.webp"
     },
     {
       id: 2,
-      img: "hecco/hecco4.jpg"
+      img: "hecco/hecco4.webp"
     },
     {
       id: 3,
-      img: "hecco/hecco5.jpg"
+      img: "hecco/hecco5.webp"
     },
     {
       id: 4,
-      img: "hecco/hecco6.jpg"
+      img: "hecco/hecco6.webp"
     },
     {
       id: 5,
-      img: "hecco/hecco7.jpg"
+      img: "hecco/hecco7.webp"
     },
     {
       id: 6,
-      img: "hecco/hecco8.jpg"
+      img: "hecco/hecco8.webp"
     },
     {
       id: 7,
-      img: "hecco/hecco9.jpg"
+      img: "hecco/hecco9.webp"
     },
     {
       id: 8,
-      img: "hecco/hecco10.jpg"
+      img: "hecco/hecco10.webp"
     },
     {
       id: 9,
-      img: "hecco/hecco11.jpg"
+      img: "hecco/hecco11.webp"
     },
   ];
 
@@ -72,7 +72,7 @@ const HotelHecco = () => {
         <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel Hecco Sarajevo" />
         <meta property="og:description" content="Experience modern comfort and exceptional hospitality at Hotel Hecco in Sarajevo. Our hotel, located near the city's cultural center, offers air-conditioned rooms with free Wi-Fi. Book your stay today and enjoy a remarkable experience." />
-        <meta property="og:image" content="/img/featured/featured6.jpg" />
+        <meta property="og:image" content="/img/featured/featured6.webp" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco" />
         <script
           key="structured-data"
@@ -83,7 +83,7 @@ const HotelHecco = () => {
               "@type": "Hotel",
               name: "Hotel Hecco Sarajevo",
               description: "Hotel Hecco Sarajevo offers modern comfort and exceptional hospitality. Located near the city's cultural center, our hotel provides air-conditioned rooms with free Wi-Fi. Experience the best of Sarajevo and book your stay at Hotel Hecco today.",
-              image: "/img/featured/featured6.jpg",
+              image: "/img/featured/featured6.webp",
               url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco",
               address: {
                 "@type": "PostalAddress",
@@ -107,15 +107,15 @@ const HotelHecco = () => {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <div className={styles.top}>
-            <div className={styles.left}>
+            <motion.div
+              className={styles.left}
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amoung: 0.25 }}
+            >
               <div>
-                <motion.div
-                  className={styles.leftTop}
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amoung: 0.25 }}
-                >
+                <div className={styles.leftTop}>
                   <div>
                     <motion.h1
                       className={styles.leftTopTitle}
@@ -125,57 +125,47 @@ const HotelHecco = () => {
                     </motion.h1>
                     <motion.span
                       className={styles.leftTopSpan}
-                      variants={slideIn("up", "spring", 0.4, 1)}
+                      variants={slideIn("up", "spring", 0.35, 1)}
                     >
                       <FaMapMarkerAlt /> Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
                   <Link href="/contact" className={styles.leftTopButton}>
-                    <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
+                    <motion.span variants={slideIn("up", "spring", 0.35, 1)}>
                       {t("cosmoBook")}
                     </motion.span>
                   </Link>
-                </motion.div>
+                </div>
                 <div className={styles.leftBot}>
                   <motion.div
                     className={styles.pillsContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
+                    variants={slideIn("up", "spring", 0.4, 1)}
                   >
                     {hotelTwoFeatures.map((feature, i) => (
-                      <motion.div
+                      <div
                         className={styles.pill}
                         key={feature.id}
-                        variants={slideIn("left", "spring", i * 0.2, 2.5)}
                       >
                         {feature.feature}
                         {feature.icon}
-                      </motion.div>
+                      </div>
                     ))}
                   </motion.div>
-                  <motion.div
-                    className={styles.leftBotTextContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
-                  >
-                    <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
+                  <motion.div className={styles.leftBotTextContainer}>
+                    <motion.p variants={slideIn("left", "spring", 0.45, 1)}>
                       <b>{t("hecoDesc")}</b>
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.5, 1)}>
                       {t("hecoDescTwo")}
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.55, 1)}>
                       {t("hecoDescThree")}
                     </motion.p>
                   </motion.div>
                 </div>
               </div>
               <BsArrowDownCircle className={styles.leftDownIcon} />
-            </div>
+            </motion.div>
             <motion.div
               className={styles.right}
               variants={staggerContainer}
@@ -185,7 +175,7 @@ const HotelHecco = () => {
             >
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
-                src="/img/featured/heco2.jpg"
+                src="/img/featured/heco2.webp"
                 alt="hotel hecco"
                 className={styles.rightImg}
               />

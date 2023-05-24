@@ -46,15 +46,15 @@ const HotelCosmopolit = () => {
     },
     {
       id: 6,
-      img: "cosmopolit/cosmopolit6.jpg"
+      img: "cosmopolit/cosmopolit6.webp"
     },
     {
       id: 7,
-      img: "cosmopolit/cosmopolit7.jpg"
+      img: "cosmopolit/cosmopolit7.webp"
     },
     {
       id: 8,
-      img: "cosmopolit/cosmopolit18.JPG"
+      img: "cosmopolit/cosmopolit18.webp"
     },
     {
       id: 9,
@@ -72,7 +72,7 @@ const HotelCosmopolit = () => {
         <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel Cosmopolit Sarajevo" />
         <meta property="og:description" content="Experience luxury and comfort at Hotel Cosmopolit in Sarajevo. Our hotel offers 16 luxurious rooms, exceptional amenities, and a prime location in the heart of the city. Book your stay today and enjoy a memorable experience." />
-        <meta property="og:image" content="/img/featured/featured7.jpg" />
+        <meta property="og:image" content="/img/featured/featured7.webp" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit" />
         <script
           key="structured-data"
@@ -83,7 +83,7 @@ const HotelCosmopolit = () => {
               "@type": "Hotel",
               name: "Hotel Cosmopolit Sarajevo",
               description: "Hotel Cosmopolit Sarajevo offers a perfect blend of luxury and comfort. With 16 luxurious rooms and exceptional amenities, we ensure our guests enjoy an exceptional experience during their stay. Discover the heart of the city and book your stay at Hotel Cosmopolit today.",
-              image: "/img/featured/featured7.jpg",
+              image: "/img/featured/featured7.webp",
               url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
               address: {
                 "@type": "PostalAddress",
@@ -108,14 +108,13 @@ const HotelCosmopolit = () => {
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.left}>
-              <div>
-                <motion.div
-                  className={styles.leftTop}
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amoung: 0.25 }}
-                >
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amoung: 0.25 }}
+              >
+                <div className={styles.leftTop}>
                   <div>
                     <motion.h1
                       className={styles.leftTopTitle}
@@ -125,55 +124,45 @@ const HotelCosmopolit = () => {
                     </motion.h1>
                     <motion.span
                       className={styles.leftTopSpan}
-                      variants={slideIn("up", "spring", 0.4, 1)}
+                      variants={slideIn("up", "spring", 0.35, 1)}
                     >
                       <FaMapMarkerAlt /> Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
                   <Link href="/contact" className={styles.leftTopButton}>
-                    <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
+                    <motion.span variants={slideIn("up", "spring", 0.35, 1)}>
                       {t("cosmoBook")}
                     </motion.span>
                   </Link>
-                </motion.div>
+                </div>
                 <div className={styles.leftBot}>
                   <motion.div
                     className={styles.pillsContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
+                    variants={slideIn("up", "spring", 0.4, 1)}
                   >
                     {hotelOneFeatures.map((feature, i) => (
-                      <motion.div
+                      <div
                         className={styles.pill}
                         key={feature.id}
-                        variants={slideIn("left", "spring", i * 0.2, 2.5)}
                       >
                         {feature.feature}
                         {feature.icon}
-                      </motion.div>
+                      </div>
                     ))}
                   </motion.div>
-                  <motion.div
-                    className={styles.leftBotTextContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
-                  >
-                    <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
+                  <div className={styles.leftBotTextContainer}>
+                    <motion.p variants={slideIn("left", "spring", 0.45, 1)}>
                       <b>{t("cosmopolitDesc")}</b>
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.5, 1)}>
                       {t("cosmoDescTwo")}
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.55, 1)}>
                       {t("cosmoDescThree")}
                     </motion.p>
-                  </motion.div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
               <BsArrowDownCircle className={styles.leftDownIcon} />
             </div>
             <motion.div

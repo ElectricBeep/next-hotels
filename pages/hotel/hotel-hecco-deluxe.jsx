@@ -77,7 +77,7 @@ const HotelHeccoDeluxe = () => {
         <link rel="apple-touch-icon" href="/hotel.png" />
         <meta property="og:title" content="Hotel City View Deluxe Sarajevo" />
         <meta property="og:description" content="Experience breathtaking views and luxurious accommodations at Hotel City View Deluxe in Sarajevo. Our hotel, located on Ferhadija Street, offers stunning panoramic views of the entire city. Book your stay today and indulge in a remarkable experience." />
-        <meta property="og:image" content="/img/featured/featured3.jpg" />
+        <meta property="og:image" content="/img/featured/featured3.webp" />
         <link rel="canonical" href="https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe" />
         <script
           key="structured-data"
@@ -88,7 +88,7 @@ const HotelHeccoDeluxe = () => {
               "@type": "Hotel",
               name: "Hotel City View Deluxe Sarajevo",
               description: "Hotel City View Deluxe Sarajevo is renowned for its breathtaking views and luxurious accommodations. Situated on Ferhadija Street, our hotel offers panoramic views of the entire city. Discover a world of elegance and book your stay at Hotel City View Deluxe today.",
-              image: "/img/featured/featured3.jpg",
+              image: "/img/featured/featured3.webp",
               url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe",
               address: {
                 "@type": "PostalAddress",
@@ -113,14 +113,13 @@ const HotelHeccoDeluxe = () => {
         <div className={styles.wrapper}>
           <div className={styles.top}>
             <div className={styles.left}>
-              <div>
-                <motion.div
-                  className={styles.leftTop}
-                  variants={staggerContainer}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amoung: 0.25 }}
-                >
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amoung: 0.25 }}
+              >
+                <div className={styles.leftTop}>
                   <div>
                     <motion.h1
                       className={styles.leftTopTitle}
@@ -130,55 +129,45 @@ const HotelHeccoDeluxe = () => {
                     </motion.h1>
                     <motion.span
                       className={styles.leftTopSpan}
-                      variants={slideIn("up", "spring", 0.4, 1)}
+                      variants={slideIn("up", "spring", 0.35, 1)}
                     >
                       <FaMapMarkerAlt /> Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina
                     </motion.span>
                   </div>
                   <Link href="/contact" className={styles.leftTopButton}>
-                    <motion.span variants={slideIn("up", "spring", 0.45, 1)}>
+                    <motion.span variants={slideIn("up", "spring", 0.35, 1)}>
                       {t("cosmoBook")}
                     </motion.span>
                   </Link>
-                </motion.div>
+                </div>
                 <div className={styles.leftBot}>
                   <motion.div
                     className={styles.pillsContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
+                    variants={slideIn("up", "spring", 0.4, 1)}
                   >
                     {hotelTwoFeatures.map((feature, i) => (
-                      <motion.div
+                      <div
                         className={styles.pill}
                         key={feature.id}
-                        variants={slideIn("left", "spring", i * 0.2, 2.5)}
                       >
                         {feature.feature}
                         {feature.icon}
-                      </motion.div>
+                      </div>
                     ))}
                   </motion.div>
-                  <motion.div
-                    className={styles.leftBotTextContainer}
-                    variants={staggerContainer}
-                    initial="hidden"
-                    whileInView="show"
-                    viewport={{ once: true, amoung: 0.25 }}
-                  >
-                    <motion.p variants={slideIn("left", "spring", 0.8, 1)}>
+                  <div className={styles.leftBotTextContainer}>
+                    <motion.p variants={slideIn("left", "spring", 0.45, 1)}>
                       <b>{t("deluxeDesc")}</b>
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.85, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.5, 1)}>
                       {t("deluxeDescTwo")}
                     </motion.p>
-                    <motion.p variants={slideIn("left", "spring", 0.9, 1)}>
+                    <motion.p variants={slideIn("left", "spring", 0.55, 1)}>
                       {t("deluxeDescThree")}
                     </motion.p>
-                  </motion.div>
+                  </div>
                 </div>
-              </div>
+              </motion.div>
               <BsArrowDownCircle className={styles.leftDownIcon} />
             </div>
             <motion.div
