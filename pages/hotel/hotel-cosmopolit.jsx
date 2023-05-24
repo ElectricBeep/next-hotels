@@ -26,23 +26,23 @@ const HotelCosmopolit = () => {
   const photos = [
     {
       id: 1,
-      img: "cosmopolit/cosmopolit11.jpg"
+      img: "cosmopolit/cosmopolit11.webp"
     },
     {
       id: 2,
-      img: "cosmopolit/cosmopolit12.JPG"
+      img: "cosmopolit/cosmopolit12.webp"
     },
     {
       id: 3,
-      img: "cosmopolit/cosmopolit13.JPG"
+      img: "cosmopolit/cosmopolit13.webp"
     },
     {
       id: 4,
-      img: "cosmopolit/cosmopolit4.jpg"
+      img: "cosmopolit/cosmopolit4.webp"
     },
     {
       id: 5,
-      img: "cosmopolit/cosmopolit5.jpg"
+      img: "cosmopolit/cosmopolit5.webp"
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const HotelCosmopolit = () => {
     },
     {
       id: 9,
-      img: "cosmopolit/cosmopolit19.JPG"
+      img: "cosmopolit/cosmopolit19.webp"
     },
   ];
 
