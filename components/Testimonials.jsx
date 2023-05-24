@@ -1,38 +1,21 @@
 import React, { useState } from "react"
 import { ImQuotesRight } from "react-icons/im";
-import { motion } from "framer-motion";
 
 import styles from "../styles/Testimonials.module.css"
-import { slideIn, staggerContainer } from "../utils/motion";
 
 const Testimonials = ({ t }) => {
   const [active, setActive] = useState("cosmopolit")
 
   return (
     <div className={styles.container}>
-      <motion.div
-        className={styles.wrapper}
-        variants={staggerContainer}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amoung: 0.6 }}
-      >
-        <motion.h1
-          className={styles.heading}
-          variants={slideIn("down", "spring", 0.3, 1)}
-        >
+      <div className={styles.wrapper}>
+        <h1 className={styles.heading}>
           {t("testiTitle")}
-        </motion.h1>
-        <motion.p
-          className={styles.text}
-          variants={slideIn("down", "spring", 0.4, 1)}
-        >
+        </h1>
+        <p className={styles.text}>
           {t("testiDesc")}
-        </motion.p>
-        <motion.div
-          className={styles.selectContainer}
-          variants={slideIn("down", "spring", 0.5, 1)}
-        >
+        </p>
+        <div className={styles.selectContainer}>
           <span
             onClick={() => setActive("cosmopolit")}
             className={active === "cosmopolit" ? styles.activeSpan : styles.span}
@@ -51,11 +34,8 @@ const Testimonials = ({ t }) => {
           >
             Hotel Hecco
           </span>
-        </motion.div>
-        <motion.div
-          className={styles.cardContainer}
-          variants={slideIn("down", "spring", 0.8, 1)}
-        >
+        </div>
+        <div className={styles.cardContainer}>
           {active === "cosmopolit" ? (
             <>
               <div className={styles.card}>
@@ -212,8 +192,8 @@ const Testimonials = ({ t }) => {
               </>
             )
           )}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   )
 }
