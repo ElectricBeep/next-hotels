@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
-import { BsArrowRightShort } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 import styles from "../styles/PhotoSlider.module.css";
