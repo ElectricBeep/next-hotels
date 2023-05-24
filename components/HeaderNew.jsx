@@ -42,20 +42,16 @@ const HeaderNew = ({ t }) => {
     hotelsSection.scrollIntoView({ behavior: "smooth" });
   };
 
-  if (!Array.isArray(featuredPhotos) || featuredPhotos.length <= 0) {
-    return null;
-  };
-
   return (
     <div className={styles.container}>
-      <motion.div
+      <div
         className={styles.wrapper}
         variants={staggerContainer}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amoung: 0.3 }}
       >
-        <motion.div
+        <div
           className={styles.left}
           variants={slideIn("left", "spring", 0.3, 1)}
         >
@@ -83,8 +79,8 @@ const HeaderNew = ({ t }) => {
               {t("headerButtonScoll")}
             </a>
           </div>
-        </motion.div>
-        <motion.div
+        </div>
+        <div
           className={styles.right}
           variants={slideIn("right", "spring", 0.3, 1)}
         >
@@ -116,8 +112,8 @@ const HeaderNew = ({ t }) => {
               </div>
             ))}
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   )
 }
