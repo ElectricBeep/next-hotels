@@ -1,8 +1,11 @@
 import React from "react";
 import Link from "next/link";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { BsArrowRightShort } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 import styles from "../styles/PhotoSlider.module.css";
+import { slideIn, staggerContainer } from "../utils/motion";
 
 const PhotoSlider = (props) => {
   const slides = [
@@ -79,14 +82,19 @@ const PhotoSlider = (props) => {
   return (
     <div className={styles.mainSliderContainer}>
       <MdChevronLeft size={50} className={`${styles.sliderIcon} ${styles.left}`} onClick={slideLeft} />
-      <div
+      <motion.div
         id="slider"
         className={styles.slider}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amoung: 0.45 }}
       >
         {slides.map((slide, i) => (
-          <div
+          <motion.div
             className={styles.sliderCard}
             key={slide.id}
+            variants={slideIn("right", "spring", i * 0.2, 2.5)}
           >
             <div className={styles.sliderCardImageContainer}>
               <Link href={slide.link} target="_blank" rel="noreferrer">
@@ -96,9 +104,9 @@ const PhotoSlider = (props) => {
             <Link href={slide.link} target="_blank" rel="noreferrer" aria-label="">
               <h2 className={styles.sliderCardTitle}>{slide.title}</h2>
             </Link>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
       <MdChevronRight size={50} className={`${styles.sliderIcon} ${styles.right}`} onClick={slideRight} />
     </div>
   )

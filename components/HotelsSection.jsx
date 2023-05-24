@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowRight, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 import styles from "../styles/HotelsSection.module.css";
+import { slideIn, staggerContainer } from "../utils/motion";
 
 const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hotelAddress, hotelDesc, linkOne, linkTwo }) => {
   return (
@@ -18,37 +20,63 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
         </h1>
       )}
       <div className={direction === 'left' || direction === 'leftTwo' ? styles.wrapperLeft : styles.wrapperRight}>
-        <div className={styles.left}>
-          <img
+        <motion.div
+          className={styles.left}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amoung: 0.55 }}
+        >
+          <motion.img
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.3, 1) : slideIn("right", "spring", 0.3, 1)}
             src={`/img/featured/${imgOne}`}
             alt="hotels sarajevo"
             className={styles.firstImage}
           />
-          <img
+          <motion.img
+            variants={direction === 'left' || direction === 'leftTwo' ? slideIn("left", "spring", 0.3, 1) : slideIn("right", "spring", 0.3, 1)}
             src={`/img/featured/${imgTwo}`}
             alt="hotels sarajevo"
             className={styles.secondImage}
           />
-        </div>
-        <div className={styles.right}>
+        </motion.div>
+        <motion.div
+          className={styles.right}
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amoung: 0.55 }}
+        >
           <div className={styles.rightContainer}>
             <hr className={styles.hr} />
-            <h2 className={styles.rightTitle}>
+            <motion.h2
+              className={styles.rightTitle}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.3, 1) : slideIn("left", "spring", 0.3, 1)}
+            >
               {hotelTitle}
-            </h2>
-            <p className={styles.rightAddress}>
+            </motion.h2>
+            <motion.p
+              className={styles.rightAddress}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.35, 1) : slideIn("left", "spring", 0.35, 1)}
+            >
               <FaMapMarkerAlt /><span>{hotelAddress}</span>
-            </p>
-            <p className={styles.rightText}>
+            </motion.p>
+            <motion.p
+              className={styles.rightText}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.4, 1) : slideIn("left", "spring", 0.4, 1)}
+            >
               {hotelDesc}
-            </p>
+            </motion.p>
             <Link href={`/hotel/${linkOne}`}>
               <button className={styles.readMoreButton}>
                 {t("hotelsSectionButton")}
                 <FaArrowRight className={styles.leftBottomIcon} />
               </button>
             </Link>
-            <div className={styles.pillsContainer}>
+            <motion.div
+              className={styles.pillsContainer}
+              variants={direction === 'left' || direction === 'leftTwo' ? slideIn("right", "spring", 0.45, 1) : slideIn("left", "spring", 0.45, 1)}
+            >
               {features.map((feature) => (
                 <div
                   className={styles.pill}
@@ -58,7 +86,7 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
                   {feature.icon}
                 </div>
               ))}
-            </div>
+            </motion.div>
             <Link href={linkTwo}>
               <button className={styles.button}>
                 {t("headerButton")}
@@ -66,7 +94,7 @@ const HotelsSection = ({ t, direction, imgOne, imgTwo, features, hotelTitle, hot
             </Link>
             <hr className={styles.hr} />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )
