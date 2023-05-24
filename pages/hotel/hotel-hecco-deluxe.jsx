@@ -27,43 +27,43 @@ const HotelHeccoDeluxe = () => {
   const photos = [
     {
       id: 1,
-      img: "deluxe/deluxe1.jpg"
+      img: "deluxe/deluxe1.webp"
     },
     {
       id: 2,
-      img: "deluxe/deluxe3.jpg"
+      img: "deluxe/deluxe3.webp"
     },
     {
       id: 3,
-      img: "deluxe/deluxe4.JPG"
+      img: "deluxe/deluxe4.webp"
     },
     {
       id: 4,
-      img: "deluxe/deluxe5.JPG"
+      img: "deluxe/deluxe5.webp"
     },
     {
       id: 5,
-      img: "deluxe/deluxe7.jpg"
+      img: "deluxe/deluxe7.webp"
     },
     {
       id: 6,
-      img: "deluxe/deluxe8.jpg"
+      img: "deluxe/deluxe8.webp"
     },
     {
       id: 7,
-      img: "deluxe/deluxe9.jpg"
+      img: "deluxe/deluxe9.webp"
     },
     {
       id: 8,
-      img: "deluxe/deluxe10.jpg"
+      img: "deluxe/deluxe10.webp"
     },
     {
       id: 9,
-      img: "deluxe/deluxe12.jpg"
+      img: "deluxe/deluxe12.webp"
     },
     {
       id: 10,
-      img: "deluxe/deluxe14.jpg"
+      img: "deluxe/deluxe14.webp"
     },
   ];
 
@@ -179,7 +179,7 @@ const HotelHeccoDeluxe = () => {
             >
               <motion.img
                 variants={slideIn("right", "spring", 0.4, 1)}
-                src="/img/featured/featured2.jpg"
+                src="/img/featured/featured2.webp"
                 alt="hotel City View deluxe"
                 className={styles.rightImg}
               />
