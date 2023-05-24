@@ -12,56 +12,56 @@ const PhotoSlider = (props) => {
     {
       id: 1,
       name: "Sarajevo sebilj",
-      img: "sebilj.jpg",
+      img: "sebilj.webp",
       title: props.t("photoSilderFirst"),
       link: "https://en.wikipedia.org/wiki/Ba%C5%A1%C4%8Dar%C5%A1ija"
     },
     {
       id: 2,
       name: "Sarajevo kazandziluk street",
-      img: "kazandziluk.jpg",
+      img: "kazandziluk.webp",
       title: props.t("photoSilderTwo"),
       link: "https://sr.wikipedia.org/sr-el/%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%9F%D0%B8%D0%BB%D1%83%D0%BA"
     },
     {
       id: 3,
       name: "Sarajevo street decoration",
-      img: "blend.jpg",
+      img: "blend.webp",
       title: props.t("photoSliderThree"),
       link: "https://en.wikipedia.org/wiki/Sarajevo"
     },
     {
       id: 4,
       name: "Sarajevo Ferhadija street",
-      img: "ferhadija.jpg",
+      img: "ferhadija.webp",
       title: props.t("photoSliderFour"),
       link: "https://en.wikipedia.org/wiki/Ferhadija_street"
     },
     {
       id: 5,
       name: "Sarajevo clock tower",
-      img: "clockTower.jpg",
+      img: "clockTower.webp",
       title: props.t("photoSliderFive"),
       link: "https://en.wikipedia.org/wiki/Sarajevo_Clock_Tower"
     },
     {
       id: 6,
       name: "Sarajevo mosque",
-      img: "husrev.jpg",
+      img: "husrev.webp",
       title: props.t("photoSliderSix"),
       link: "https://en.wikipedia.org/wiki/Gazi_Husrev-beg_Mosque"
     },
     {
       id: 7,
       name: "Sarajevo Bezistan",
-      img: "bezistan.jpg",
+      img: "bezistan.webp",
       title: props.t("photoSliderSeven"),
       link: "https://en.wikipedia.org/wiki/Gazi_Husrev-begov_bezistan"
     },
     {
       id: 8,
       name: "Sarajevo City Hall",
-      img: "cityHall.jpg",
+      img: "cityHall.webp",
       title: props.t("photoSliderEight"),
       link: "https://en.wikipedia.org/wiki/Vije%C4%87nica"
     },

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 
 import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -10,15 +9,15 @@ const HeaderNew = ({ t }) => {
   const featuredPhotos = [
     {
       id: 1,
-      img: "featured/featured3.jpg",
+      img: "featured/featured3.webp",
     },
     {
       id: 2,
-      img: "featured/featured4.jpg",
+      img: "featured/featured4.webp",
     },
     {
       id: 3,
-      img: "featured/featured7.jpg",
+      img: "featured/featured7.webp",
     },
   ];
 

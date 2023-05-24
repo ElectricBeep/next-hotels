@@ -47,7 +47,7 @@ export default function Home() {
                     "@type": "Hotel",
                     name: "Hotel Cosmopolit",
                     description: "The hotel is situated in the heart of the city, at 15 Radićeva street. It offers a perfect blend of pristine comfort and quality. With 16 luxurious rooms, designed and equipped with the latest world standards, guests can be assured of an exceptional experience. Our hospitable staff will ensure that your stay at our hotel is even more enjoyable.",
-                    image: "/img/featured/featured7.jpg",
+                    image: "/img/featured/featured7.webp",
                     url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-cosmopolit",
                     address: {
                       "@type": "PostalAddress",
@@ -73,7 +73,7 @@ export default function Home() {
                     "@type": "Hotel",
                     name: "Hotel City View Deluxe",
                     description: "The City View Deluxe Hotel is situated in the heart of Sarajevo, on Ferhadija Street, occupying the top four floors of a business building. From here, guests can enjoy breathtaking views of the entire city.",
-                    image: "/img/featured/featured3.jpg",
+                    image: "/img/featured/featured3.webp",
                     url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco-deluxe",
                     address: {
                       "@type": "PostalAddress",
@@ -99,7 +99,7 @@ export default function Home() {
                     "@type": "Hotel",
                     name: "Hotel Hecco",
                     description: "Set in a modern building and renovated in 2018, just a 5-minute walk from Sarajevo’s cultural centre, Hotel Hecco provides air-conditioned rooms with free Wi-Fi. It offers a restaurant and organised tours. This hotel uses renewable energy sources only.",
-                    image: "/img/featured/featured6.jpg",
+                    image: "/img/featured/featured6.webp",
                     url: "https://www.hecco-hotels-sarajevo.com/hotel/hotel-hecco",
                     address: {
                       "@type": "PostalAddress",
@@ -129,8 +129,8 @@ export default function Home() {
           t={t}
           direction={"left"}
           features={hotelOneFeatures}
-          imgOne={"featured1.jpg"}
-          imgTwo={"cosmopolitNew.jpg"}
+          imgOne={"featured1.webp"}
+          imgTwo={"cosmopolitNew.webp"}
           hotelTitle={"Hotel Cosmopolit"}
           hotelAddress={"Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina"}
           hotelDesc={t("cosmopolitDesc")}
@@ -141,8 +141,8 @@ export default function Home() {
           t={t}
           direction={"right"}
           features={hotelTwoFeatures}
-          imgOne={"featured3.jpg"}
-          imgTwo={"delux1.jpg"}
+          imgOne={"featured3.webp"}
+          imgTwo={"delux1.webp"}
           hotelTitle={"Hotel City View Deluxe"}
           hotelAddress={"Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina"}
           hotelDesc={t("deluxeDesc")}
@@ -153,8 +153,8 @@ export default function Home() {
           t={t}
           direction={"leftTwo"}
           features={hotelThreeFeatures}
-          imgOne={"featured6.jpg"}
-          imgTwo={"heco1.jpg"}
+          imgOne={"featured6.webp"}
+          imgTwo={"heco1.webp"}
           hotelTitle={"Hotel Hecco"}
           hotelAddress={"Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina"}
           hotelDesc={t("hecoDesc")}
