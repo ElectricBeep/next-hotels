@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import styles from "../styles/HeaderNew.module.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { slideIn, staggerContainer } from "../utils/motion";
 
 const HeaderNew = ({ t }) => {
   const [current, setCurrent] = useState(0);
@@ -46,8 +48,17 @@ const HeaderNew = ({ t }) => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.wrapper}>
-        <div className={styles.left}>
+      <motion.div
+        className={styles.wrapper}
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amoung: 0.3 }}
+      >
+        <motion.div
+          className={styles.left}
+          variants={slideIn("left", "spring", 0.3, 1)}
+        >
           <div className={styles.content}>
             <h2 className={styles.titleTop}>
               {t("headerTitleOne")}
@@ -72,8 +83,11 @@ const HeaderNew = ({ t }) => {
               {t("headerButtonScoll")}
             </a>
           </div>
-        </div>
-        <div className={styles.right}>
+        </motion.div>
+        <motion.div
+          className={styles.right}
+          variants={slideIn("right", "spring", 0.3, 1)}
+        >
           <div className={styles.imgContainer}>
             <div className={`${styles.arrowIconContainer} ${styles.arrowLeft}`}>
               <FiChevronLeft className={styles.arrowIcon} onClick={prevSlide} />
@@ -102,8 +116,8 @@ const HeaderNew = ({ t }) => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
