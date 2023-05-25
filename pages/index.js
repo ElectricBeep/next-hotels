@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { LazyMotion, domAnimation } from "framer-motion"
 
 import styles from '@/styles/Home.module.css'
 import HotelsSection from '@/components/HotelsSection'
@@ -125,47 +124,45 @@ export default function Home() {
         />
       </Head>
       <main className={styles.main}>
-        <LazyMotion features={domAnimation}>
-          <HeaderNew t={t} />
-          <HotelsSection
-            t={t}
-            direction={"left"}
-            features={hotelOneFeatures}
-            imgOne={"featured1.webp"}
-            imgTwo={"cosmopolitNew.webp"}
-            hotelTitle={"Hotel Cosmopolit"}
-            hotelAddress={"Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina"}
-            hotelDesc={t("cosmopolitDesc")}
-            linkOne={"hotel-cosmopolit"}
-            linkTwo={"/contact"}
-          />
-          <HotelsSection
-            t={t}
-            direction={"right"}
-            features={hotelTwoFeatures}
-            imgOne={"featured3.webp"}
-            imgTwo={"delux1.webp"}
-            hotelTitle={"Hotel City View Deluxe"}
-            hotelAddress={"Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina"}
-            hotelDesc={t("deluxeDesc")}
-            linkOne={"hotel-hecco-deluxe"}
-            linkTwo={"/contact"}
-          />
-          <HotelsSection
-            t={t}
-            direction={"leftTwo"}
-            features={hotelThreeFeatures}
-            imgOne={"featured6.webp"}
-            imgTwo={"heco1.webp"}
-            hotelTitle={"Hotel Hecco"}
-            hotelAddress={"Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina"}
-            hotelDesc={t("hecoDesc")}
-            linkOne={"hotel-hecco"}
-            linkTwo={"/contact"}
-          />
-          <Attractions t={t} />
-          <Testimonials t={t} />
-        </LazyMotion>
+        <HeaderNew t={t} />
+        <HotelsSection
+          t={t}
+          direction={"left"}
+          features={hotelOneFeatures}
+          imgOne={"featured1.webp"}
+          imgTwo={"cosmopolitNew.webp"}
+          hotelTitle={"Hotel Cosmopolit"}
+          hotelAddress={"Radiceva 15, 71000 Sarajevo, Bosnia and Herzegovina"}
+          hotelDesc={t("cosmopolitDesc")}
+          linkOne={"hotel-cosmopolit"}
+          linkTwo={"/contact"}
+        />
+        <HotelsSection
+          t={t}
+          direction={"right"}
+          features={hotelTwoFeatures}
+          imgOne={"featured3.webp"}
+          imgTwo={"delux1.webp"}
+          hotelTitle={"Hotel City View Deluxe"}
+          hotelAddress={"Ferhadija 2, 71000 Sarajevo, Bosnia and Herzegovina"}
+          hotelDesc={t("deluxeDesc")}
+          linkOne={"hotel-hecco-deluxe"}
+          linkTwo={"/contact"}
+        />
+        <HotelsSection
+          t={t}
+          direction={"leftTwo"}
+          features={hotelThreeFeatures}
+          imgOne={"featured6.webp"}
+          imgTwo={"heco1.webp"}
+          hotelTitle={"Hotel Hecco"}
+          hotelAddress={"Medresa 1, 71000 Sarajevo, Bosnia and Herzegovina"}
+          hotelDesc={t("hecoDesc")}
+          linkOne={"hotel-hecco"}
+          linkTwo={"/contact"}
+        />
+        <Attractions t={t} />
+        <Testimonials t={t} />
       </main>
     </>
   )
